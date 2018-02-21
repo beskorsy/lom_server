@@ -1,12 +1,14 @@
-
-
-from django.conf.urls import url, include
+from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
-from .views import CreateView, DetailsView
+
+from .views import LocalityListView, ScrapyardListView, TransportListView, SettingRetrieveView, CustomerRetrieveView
 
 urlpatterns = {
-    url(r'^customer/$', CreateView.as_view(), name="create"),
-    url(r'^customer/(?P<pk>[0-9]+)/$', DetailsView.as_view(), name="details"),
+    url(r'^scrapyard/', ScrapyardListView.as_view(), name="Scrapyard list"),
+    url(r'^locality/', LocalityListView.as_view(), name="Locality list"),
+    url(r'^transport/', TransportListView.as_view(), name="Transport list"),
+    url(r'^setting/(?P<pk>[0-9]+)/$', SettingRetrieveView.as_view(), name="Setting list"),
+    url(r'^customer/$', CustomerRetrieveView.as_view(), name="Customer list"),
 }
 
 urlpatterns = format_suffix_patterns(urlpatterns)

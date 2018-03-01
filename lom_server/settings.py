@@ -89,7 +89,7 @@ WSGI_APPLICATION = 'lom_server.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'django_db',
+        'NAME': 'lom1',
         'USER' : 'bes',
         'PASSWORD' : 'qwerty',
         'HOST' : '127.0.0.1',

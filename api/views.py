@@ -1,7 +1,7 @@
 from rest_framework import generics
 
-from .models import Setting, Locality, Scrapyard, Transport, Customer
-from .serializers import SettingSerializer, CustomerSerializer, LocalitySerializer, ScrapyardSerializer, \
+from .models import Data, Locality, Scrapyard, Transport, Customer
+from .serializers import DataSerializer, CustomerSerializer, LocalitySerializer, ScrapyardSerializer, \
     TransportSerializer
 
 
@@ -23,11 +23,17 @@ class TransportListView(generics.ListAPIView):
     serializer_class = TransportSerializer
 
 
-class SettingRetrieveView(generics.RetrieveAPIView):
+class DataView(generics.RetrieveAPIView):
     """This class handles the http GET, PUT and DELETE requests."""
+    queryset = Data.objects.all()
+    serializer_class = DataSerializer
 
-    queryset = Setting.objects.all()
-    serializer_class = SettingSerializer
+    def get_object(self):
+        queryset = self.filter_queryset(self.get_queryset())
+        # make sure to catch 404's below
+        obj = queryset.get(pk=1)
+        self.check_object_permissions(self.request, obj)
+        return obj
 
 
 class CustomerRetrieveView(generics.ListAPIView):

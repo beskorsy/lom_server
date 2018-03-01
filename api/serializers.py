@@ -2,7 +2,7 @@
 
 from rest_framework import serializers
 
-from .models import Customer, Locality, Transport, Email, Scrapyard, Setting
+from .models import Customer, Locality, Transport, Email, Scrapyard, Data
 
 
 class CustomerSerializer(serializers.ModelSerializer):
@@ -50,10 +50,13 @@ class EmailSerializer(serializers.ModelSerializer):
         fields = ('id', 'email')
 
 
-class SettingSerializer(serializers.ModelSerializer):
+class DataSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
+    localitys = LocalitySerializer(many=True, read_only=True)
+    transports = TransportSerializer(many=True, read_only=True)
+    scrapyards = ScrapyardSerializer(many=True, read_only=True)
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
-        model = Setting
-        fields = ('id', 'loader', 'cutter','calculatedInPlace')
+        model = Data
+        fields = ('id', 'loader', 'cutter', 'calculatedInPlace', 'transports', 'scrapyards', 'localitys')

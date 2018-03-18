@@ -11,6 +11,11 @@ class LocalityListView(generics.ListAPIView):
     serializer_class = LocalitySerializer
 
 
+class LocalityListCreateView(generics.ListCreateAPIView):
+    queryset = Locality.objects.all()
+    serializer_class = LocalitySerializer
+
+
 class ScrapyardListView(generics.ListAPIView):
     """This class defines the create behavior of our rest api."""
     queryset = Scrapyard.objects.all()

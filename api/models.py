@@ -30,7 +30,7 @@ class Locality(models.Model):
     distanceBelogorsk = models.IntegerField(blank=False, default=0)
     distanceSkovorodino = models.IntegerField(blank=False, default=0)
     distanceTygda = models.IntegerField(blank=False, default=0)
-    data = models.ForeignKey(Data, related_name='localitys', on_delete=models.CASCADE, null=True)
+    data = models.ForeignKey(Data, related_name='localitys', on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""

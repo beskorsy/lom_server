@@ -150,3 +150,11 @@ STATICFILES_DIRS = [
 STATIC_ROOT = os.path.join(BASE_DIR, "static")
 ADMIN_TOOLS_THEMING_CSS = 'css/theming.css'
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin_tool/"
+
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'bolshe.loma@gmail.com'
+EMAIL_HOST_PASSWORD = '111'
+DEFAULT_EMAIL_FROM = EMAIL_HOST_USER
+EMAIL_PORT = 587

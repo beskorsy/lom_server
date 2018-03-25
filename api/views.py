@@ -1,8 +1,8 @@
 from rest_framework import generics
 
-from .models import Data, Locality, Scrapyard, Transport, Customer
+from .models import Data, Locality, Scrapyard, Transport, Customer, Request
 from .serializers import DataSerializer, CustomerSerializer, LocalitySerializer, ScrapyardSerializer, \
-    TransportSerializer
+    TransportSerializer, RequestSerializer
 
 
 class LocalityListView(generics.ListAPIView):
@@ -14,6 +14,11 @@ class LocalityListView(generics.ListAPIView):
 class LocalityListCreateView(generics.ListCreateAPIView):
     queryset = Locality.objects.all()
     serializer_class = LocalitySerializer
+
+
+class RequestCreateView(generics.ListCreateAPIView):
+    queryset = Request.objects.all()
+    serializer_class = RequestSerializer
 
 
 class ScrapyardListView(generics.ListAPIView):
@@ -41,7 +46,12 @@ class DataView(generics.RetrieveAPIView):
         return obj
 
 
-class CustomerRetrieveView(generics.ListAPIView):
+class CustomerRetrieveView(generics.ListCreateAPIView):
+    """This class handles the http GET, PUT and DELETE requests."""
+    queryset = Customer.objects.all()
+    serializer_class = CustomerSerializer
+
+class CustomerListView(generics.ListAPIView):
     """This class handles the http GET, PUT and DELETE requests."""
 
     serializer_class = CustomerSerializer
@@ -50,10 +60,6 @@ class CustomerRetrieveView(generics.ListAPIView):
         This view should return a list of all the purchases for
         the user as determined by the username portion of the URL.
         """
-
-        # http://localhost:8000/customer/?format=json&phone=79039225020
-        # return Customer.objects.filter(phone='+'+ self.request.query_params.get('phone'))
-
         queryset = Customer.objects.all()
         phone = self.request.query_params.get('phone', None)
         if phone  is not None:

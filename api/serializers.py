@@ -1,12 +1,17 @@
 # api/serializers.py
-
+from django.core.mail import EmailMessage
 from rest_framework import serializers
-
-from .models import Customer, Locality, Transport, Email, Scrapyard, Data
+import googlemaps
+from .models import Customer, Locality, Transport, Email, Scrapyard, Data, Request
 
 
 class CustomerSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
+
+    def create(self, validated_data):
+        obj, created = Customer.objects.update_or_create(phone = validated_data.get('phone', None),
+                                                         defaults={'discount': validated_data.get('discount', None)})
+        return obj
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
@@ -16,6 +21,32 @@ class CustomerSerializer(serializers.ModelSerializer):
 
 class LocalitySerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""
+
+    def create(self, validated_data):
+        name = validated_data['name']
+        locality = Locality.objects.create(**validated_data)
+
+        origins = [name + ", Амурская область, Россия"]
+        destinations = ["Белогорск, Амурская область, Россия",
+                        "Сковородино, Амурская область, Россия",
+                        "Тыгда, Амурская область, Россия"]
+
+        gmaps = googlemaps.Client(key='111')
+        matrix = gmaps.distance_matrix(origins, destinations,
+                                       mode="driving")
+
+        try:
+            elements = matrix['rows'][0]['elements']
+            locality.distanceBelogorsk = elements[0]['distance']['value']
+            locality.distanceSkovorodino = elements[1]['distance']['value']
+            locality.distanceTygda = elements[2]['distance']['value']
+
+            locality.save()
+            return locality
+
+        except Exception:
+            locality.delete()
+
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
@@ -29,7 +60,7 @@ class ScrapyardSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Scrapyard
-        fields = ('id', 'name', 'price')
+        fields = ('id', 'name', 'price', 'coef')
 
 
 class TransportSerializer(serializers.ModelSerializer):
@@ -49,6 +80,22 @@ class EmailSerializer(serializers.ModelSerializer):
         model = Email
         fields = ('id', 'email')
 
+class RequestSerializer(serializers.ModelSerializer):
+    """Serializer to map the Model instance into JSON format."""
+
+
+    def create(self, validated_data):
+        request = Request.objects.create(**validated_data)
+        email = EmailMessage('Заказ ' + request.phone, 'Заказ: ' + request.phone, to=['besn1989@mail.ru'])
+        email.send()
+        return Request
+
+
+    class Meta:
+        """Meta class to map serializer's fields with the model fields."""
+        model = Request
+        fields = ('phone', 'discount', 'locality', 'address', 'scrapyard', 'distantce', 'transport', 'cost', 'tonn',
+                  'comment', 'loader', 'cutter', 'calculatedInPlace')
 
 class DataSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""

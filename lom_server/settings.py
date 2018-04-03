@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'api.apps.ApiConfig',
     'rest_framework',
+    'rest_framework.authtoken',
     'phonenumber_field',
+    'djng',
 ]
 
 MIDDLEWARE = [
@@ -116,6 +118,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': (
+        'rest_framework.permissions.IsAuthenticated',
+    ),
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework.authentication.TokenAuthentication',
+    )
+}
+
 
 # Internationalization
 # https://docs.djangoproject.com/en/2.0/topics/i18n/
@@ -155,6 +166,6 @@ EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_HOST_USER = 'bolshe.loma@gmail.com'
-EMAIL_HOST_PASSWORD = '111'
+EMAIL_HOST_PASSWORD = 'Post3578LEV'
 DEFAULT_EMAIL_FROM = EMAIL_HOST_USER
 EMAIL_PORT = 587

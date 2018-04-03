@@ -1,6 +1,14 @@
 from django.db import models
 from phonenumber_field.modelfields import PhoneNumberField
-from sqlalchemy.sql import False_
+from django.db.models.signals import post_save
+from django.dispatch import receiver
+from rest_framework.authtoken.models import Token
+from django.conf import settings
+
+@receiver(post_save, sender=settings.AUTH_USER_MODEL)
+def create_auth_token(sender, instance=None, created=False, **kwargs):
+    if created:
+        Token.objects.create(user=instance)
 
 
 class Data(models.Model):
@@ -77,7 +85,7 @@ class Request(models.Model):
     calculatedInPlace = models.BooleanField(blank=False)
     discount = models.CharField(blank=True, max_length=12)
     locality = models.CharField(blank=False, max_length=25)
-    address = models.CharField(blank=False,max_length=25)
+    address = models.CharField(blank=False,max_length=125)
     scrapyard = models.CharField(blank=False, max_length=25)
     distantce = models.CharField(blank=False, max_length=10)
     transport = models.CharField(blank=False, max_length=25)
@@ -88,6 +96,13 @@ class Request(models.Model):
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
-        return "{Номер телефона: %s, скидка по номеру: %s}".format(self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
-                           self.transport, self.cost, self.tonn, self.data, self.comment, self.loader, self.cutter,
+        return "Номер телефона: {}. Доплата по статусу: {}. \n" \
+               "Наседенный пункт: {}. Адрес: {}.\n"\
+            "Пункт приема: {}. Растояние {}.\n"\
+            "Транспорт: {}. Вес: {}\n"\
+            "Стоимость доставки: {}\n"\
+            "Дата: {}.\n"\
+            "Комментарий: {}\n"\
+            "Грузщики: {}. Резчики: {}. Рассчет на месте: {}".format(self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
+                           self.transport, self.tonn, self.cost, self.data, self.comment, self.loader, self.cutter,
                            self.calculatedInPlace)

@@ -86,7 +86,8 @@ class RequestSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         request = Request.objects.create(**validated_data)
-        email = EmailMessage('Заказ ' + request.phone, 'Заказ: ' + request.phone, to=['besn1989@mail.ru'])
+        emails = Email.objects.all()
+        email = EmailMessage('Заказ ' + request.phone, 'Заказ: ' + request.__str__(), to=emails)
         email.send()
         return Request
 

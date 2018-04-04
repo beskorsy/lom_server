@@ -85,14 +85,15 @@ class Request(models.Model):
     calculatedInPlace = models.BooleanField(blank=False)
     discount = models.CharField(blank=True, max_length=12)
     locality = models.CharField(blank=False, max_length=25)
-    address = models.CharField(blank=False,max_length=125)
+    address = models.CharField(blank=True,max_length=125)
     scrapyard = models.CharField(blank=False, max_length=25)
     distantce = models.CharField(blank=False, max_length=10)
     transport = models.CharField(blank=False, max_length=25)
     cost = models.CharField(blank=False, max_length=12)
-    tonn = models.CharField(blank=False, max_length=12)
+    tonn = models.CharField(blank=True, max_length=12)
     data = models.CharField(blank=True, max_length=25)
     comment = models.CharField(blank=True, max_length=400)
+    created_date = models.DateTimeField(blank=True, auto_now_add=True)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
@@ -103,6 +104,7 @@ class Request(models.Model):
             "Стоимость доставки: {}\n"\
             "Дата: {}.\n"\
             "Комментарий: {}\n"\
-            "Грузщики: {}. Резчики: {}. Рассчет на месте: {}".format(self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
+            "Грузщики: {}. Резчики: {}. Рассчет на месте: {}\n"\
+            "Дата создания запроса {}".format(self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
                            self.transport, self.tonn, self.cost, self.data, self.comment, self.loader, self.cutter,
-                           self.calculatedInPlace)
+                           self.calculatedInPlace, self.created_date.__str__())

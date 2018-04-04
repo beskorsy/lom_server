@@ -1,5 +1,12 @@
+from django.http import JsonResponse
 from rest_framework import generics
 
+import json
+from django.http import JsonResponse
+from django.views.generic import TemplateView
+from django.urls import reverse_lazy
+
+from api.form import SubscribeForm, AddressForm
 from .models import Data, Locality, Scrapyard, Transport, Customer, Request
 from .serializers import DataSerializer, CustomerSerializer, LocalitySerializer, ScrapyardSerializer, \
     TransportSerializer, RequestSerializer
@@ -17,6 +24,11 @@ class LocalityListCreateView(generics.ListCreateAPIView):
 
 
 class RequestCreateView(generics.ListCreateAPIView):
+    queryset = Request.objects.all()
+    serializer_class = RequestSerializer
+
+
+class RequestListView(generics.ListAPIView):
     queryset = Request.objects.all()
     serializer_class = RequestSerializer
 
@@ -82,3 +94,31 @@ class CustomerListView(generics.ListAPIView):
 #
 #     queryset = Locality.objects.all()
 #     serializer_class = LocalitySerializer
+
+
+class SubscribeView(TemplateView):
+    template_name = 'index.html'
+    success_url = reverse_lazy('form_data_valid')
+
+    def get(self, request, *args, **kwargs):
+        context = self.get_context_data(**kwargs)
+        context['subscribe_form'] = SubscribeForm()
+        context['address_form'] = AddressForm()
+        return self.render_to_response(context)
+
+    def put(self, request, *args, **kwargs):
+        request_data = json.loads(request.body)
+        subscribe_form = SubscribeForm(data=request_data.get(SubscribeForm.scope_prefix, {}))
+        address_form = AddressForm(data=request_data.get(AddressForm.scope_prefix, {}))
+        response_data = {}
+
+        if subscribe_form.is_valid() and address_form.is_valid():
+            response_data.update({'success_url': self.success_url})
+            return JsonResponse(response_data)
+
+        # otherwise report form validation errors
+        response_data.update({
+            subscribe_form.form_name: subscribe_form.errors,
+            address_form.form_name: address_form.errors,
+        })
+        return JsonResponse(response_data, status=422)

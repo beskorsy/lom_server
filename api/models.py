@@ -4,6 +4,7 @@ from django.db.models.signals import post_save
 from django.dispatch import receiver
 from rest_framework.authtoken.models import Token
 from django.conf import settings
+from django.utils import timezone
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
@@ -93,7 +94,13 @@ class Request(models.Model):
     tonn = models.CharField(blank=True, max_length=12)
     data = models.CharField(blank=True, max_length=25)
     comment = models.CharField(blank=True, max_length=400)
-    created_date = models.DateTimeField(blank=True, auto_now_add=True)
+    createdDate = models.CharField(blank=False, max_length=50, null=True)
+
+    def save(self, *args, **kwargs):
+        ''' On save, update timestamps '''
+        if not self.id:
+            self.createdDate = timezone.now()
+        return super(Request, self).save(*args, **kwargs)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
@@ -107,4 +114,4 @@ class Request(models.Model):
             "Грузщики: {}. Резчики: {}. Рассчет на месте: {}\n"\
             "Дата создания запроса {}".format(self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
                            self.transport, self.tonn, self.cost, self.data, self.comment, self.loader, self.cutter,
-                           self.calculatedInPlace, self.created_date.__str__())
+                           self.calculatedInPlace, self.createdDate.__str__())

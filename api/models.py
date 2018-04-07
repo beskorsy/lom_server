@@ -114,6 +114,6 @@ class Request(models.Model):
             "Дата: {}.\n"\
             "Комментарий: {}\n"\
             "Грузщики: {}. Резчики: {}. Рассчет на месте: {}\n"\
-            "Дата создания запроса: {}".format(self.id, self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
+            "Дата создания запроса: {}".format(self.id.__str__(), self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
                            self.transport, self.tonn, self.cost, self.data, self.comment, self.loader, self.cutter,
-                           self.calculatedInPlace, self.createdDate.__str__())
+                           self.calculatedInPlace, self.createdDate)

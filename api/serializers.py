@@ -87,16 +87,17 @@ class RequestSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         request = Request.objects.create(**validated_data)
         emails = list(Email.objects.all().values_list("email", flat=True))
-        email = EmailMessage('Заказ ' + request.phone, 'Заказ: ' + request.__str__(), to=emails)
+        email = EmailMessage('Заказ номер '+ request.id.__str__() + ' Телефон ' + request.phone,
+                             'Заказ: ' + request.__str__(), to=emails)
         email.send()
-        return Request
+        return super(RequestSerializer, self).create(validated_data)
 
 
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Request
         fields = ('id', 'phone', 'discount', 'locality', 'address', 'scrapyard', 'distantce', 'transport', 'cost', 'tonn',
-                  'comment', 'loader', 'cutter', 'calculatedInPlace', 'createdDate')
+                  'data', 'comment', 'loader', 'cutter', 'calculatedInPlace', 'createdDate')
 
 class DataSerializer(serializers.ModelSerializer):
     """Serializer to map the Model instance into JSON format."""

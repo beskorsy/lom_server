@@ -95,7 +95,7 @@ class RequestSerializer(serializers.ModelSerializer):
     class Meta:
         """Meta class to map serializer's fields with the model fields."""
         model = Request
-        fields = ('phone', 'discount', 'locality', 'address', 'scrapyard', 'distantce', 'transport', 'cost', 'tonn',
+        fields = ('id', 'phone', 'discount', 'locality', 'address', 'scrapyard', 'distantce', 'transport', 'cost', 'tonn',
                   'comment', 'loader', 'cutter', 'calculatedInPlace', 'createdDate')
 
 class DataSerializer(serializers.ModelSerializer):

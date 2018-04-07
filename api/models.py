@@ -80,6 +80,7 @@ class Email(models.Model):
 
 
 class Request(models.Model):
+    # id = models.AutoField(primary_key=True)
     phone = models.CharField(blank=False, max_length=15)
     loader = models.BooleanField(blank=False)
     cutter = models.BooleanField(blank=False)
@@ -104,7 +105,8 @@ class Request(models.Model):
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
-        return "Номер телефона: {}. Доплата по статусу: {}. \n" \
+        return "Номер заказа: {}\n" \
+               "Номер телефона: {}. Доплата по статусу: {}. \n" \
                "Наседенный пункт: {}. Адрес: {}.\n"\
             "Пункт приема: {}. Растояние {}.\n"\
             "Транспорт: {}. Вес: {}\n"\
@@ -112,6 +114,6 @@ class Request(models.Model):
             "Дата: {}.\n"\
             "Комментарий: {}\n"\
             "Грузщики: {}. Резчики: {}. Рассчет на месте: {}\n"\
-            "Дата создания запроса {}".format(self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
+            "Дата создания запроса: {}".format(self.id, self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
                            self.transport, self.tonn, self.cost, self.data, self.comment, self.loader, self.cutter,
                            self.calculatedInPlace, self.createdDate.__str__())

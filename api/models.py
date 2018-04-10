@@ -18,7 +18,7 @@ class Data(models.Model):
     loader = models.BooleanField(blank=False)
     cutter = models.BooleanField(blank=False)
     calculatedInPlace = models.BooleanField(blank=False)
-    excessFare = models.IntegerField(blank=False, default=0)
+    excessFare = models.DecimalField(blank=False, default=0, decimal_places=2, max_digits=10)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""

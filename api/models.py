@@ -1,10 +1,11 @@
+from django.conf import settings
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
 from django.db.models.signals import post_save
 from django.dispatch import receiver
-from rest_framework.authtoken.models import Token
-from django.conf import settings
 from django.utils import timezone
+from phonenumber_field.modelfields import PhoneNumberField
+from rest_framework.authtoken.models import Token
+
 
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def create_auth_token(sender, instance=None, created=False, **kwargs):
@@ -17,10 +18,11 @@ class Data(models.Model):
     loader = models.BooleanField(blank=False)
     cutter = models.BooleanField(blank=False)
     calculatedInPlace = models.BooleanField(blank=False)
+    excessFare = models.IntegerField(blank=False, default=0)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
-        return "{}".format(self.loader, self.cutter, self.calculatedInPlace)
+        return "{}".format(self.loader, self.cutter, self.calculatedInPlace, self.excessFare)
 
 
 class Customer(models.Model):
@@ -80,14 +82,13 @@ class Email(models.Model):
 
 
 class Request(models.Model):
-    # id = models.AutoField(primary_key=True)
     phone = models.CharField(blank=False, max_length=15)
     loader = models.BooleanField(blank=False)
     cutter = models.BooleanField(blank=False)
     calculatedInPlace = models.BooleanField(blank=False)
     discount = models.CharField(blank=True, max_length=12)
     locality = models.CharField(blank=False, max_length=25)
-    address = models.CharField(blank=True,max_length=125)
+    address = models.CharField(blank=True, max_length=125)
     scrapyard = models.CharField(blank=False, max_length=25)
     distantce = models.CharField(blank=False, max_length=10)
     transport = models.CharField(blank=False, max_length=25)
@@ -96,6 +97,7 @@ class Request(models.Model):
     data = models.CharField(blank=True, max_length=25)
     comment = models.CharField(blank=True, max_length=400)
     createdDate = models.CharField(blank=False, max_length=50, null=True)
+    price = models.CharField(blank=False, max_length=12)
 
     def save(self, *args, **kwargs):
         ''' On save, update timestamps '''
@@ -105,15 +107,17 @@ class Request(models.Model):
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
-        return "Номер заказа: {}\n" \
+        return "\nНомер заказа: {}\n" \
                "Номер телефона: {}. Доплата по статусу: {}. \n" \
-               "Наседенный пункт: {}. Адрес: {}.\n"\
-            "Пункт приема: {}. Растояние {}.\n"\
-            "Транспорт: {}. Вес: {}\n"\
-            "Стоимость доставки: {}\n"\
-            "Дата: {}.\n"\
-            "Комментарий: {}\n"\
-            "Грузщики: {}. Резчики: {}. Рассчет на месте: {}\n"\
-            "Дата создания запроса: {}".format(self.id.__str__(), self.phone, self.discount, self.locality, self.address, self.scrapyard, self.distantce,
-                           self.transport, self.tonn, self.cost, self.data, self.comment, self.loader, self.cutter,
-                           self.calculatedInPlace, self.createdDate)
+               "Наседенный пункт: {}. Адрес: {}\n" \
+               "Пункт приема: {}. Растояние {} метров\n" \
+               "Цена за тонну: {}.\n" \
+               "Транспорт: {}. Вес: {}\n" \
+               "Стоимость доставки: {}\n" \
+               "Дата: {}\n" \
+               "Комментарий: {}\n" \
+               "Грузщики: {}. Резчики: {}. Рассчет на месте: {}\n" \
+               "Дата создания запроса: {}".format(self.id.__str__(), self.phone, self.discount, self.locality,
+                                                  self.address, self.scrapyard, self.distantce, self.price,
+                                                  self.transport, self.tonn, self.cost, self.data, self.comment,
+                                                  self.loader, self.cutter, self.calculatedInPlace, self.createdDate)

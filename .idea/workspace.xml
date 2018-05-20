@@ -4,19 +4,9 @@
     <bookmark url="file://$PROJECT_DIR$/templates/base.html" description="&lt;link rel=&quot;stylesheet&quot; href=&quot;{% static 'css/lom.cs..." line="6" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="250357b7-8756-4081-bcc9-4c2e471c19b2" name="Default" comment="email">
-      <change afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/api/forms.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/css/lom.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/js/maskedinput.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/media/logo.png" afterDir="false" />
+    <list default="true" id="250357b7-8756-4081-bcc9-4c2e471c19b2" name="Default" comment="site">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lom_server.iml" beforeDir="false" afterPath="$PROJECT_DIR$/lom_server.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lom_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lom_server/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/request_new_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/request_new_edit.html" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -51,11 +41,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="request_new_edit.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="request_new_edit.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/request_new_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="184">
+            <state relative-caret-position="585">
               <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -199,7 +198,6 @@
         <option value="$PROJECT_DIR$/api/migrations/urls.py" />
         <option value="$PROJECT_DIR$/lom_server/urls.py" />
         <option value="$PROJECT_DIR$/api/tests.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$USER_HOME$/.local/lib/python3.6/site-packages/send_email.py" />
         <option value="$PROJECT_DIR$/api/__init__.py" />
         <option value="$PROJECT_DIR$/api/admin.py" />
@@ -223,6 +221,7 @@
         <option value="$PROJECT_DIR$/lom_server/settings.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/request_new_edit.html" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -597,7 +596,7 @@
       <workItem from="1525197063456" duration="13822000" />
       <workItem from="1525514526670" duration="757000" />
       <workItem from="1525528921509" duration="22332000" />
-      <workItem from="1526731066678" duration="24676000" />
+      <workItem from="1526731066678" duration="25432000" />
     </task>
     <task id="LOCAL-00001" summary="ignor">
       <created>1518303237083</created>
@@ -697,11 +696,18 @@
       <option name="project" value="LOCAL" />
       <updated>1523397553728</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="site">
+      <created>1526855366370</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1526855366370</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="242522000" />
+    <option name="totallyTimeSpent" value="243278000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
@@ -716,7 +722,7 @@
       <window_info anchor="right" id="Nativer Admin" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="8" />
-      <window_info id="Version Control" order="6" weight="0.30322582" />
+      <window_info id="Version Control" order="6" weight="0.30298188" />
       <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3290461" />
       <window_info anchor="bottom" id="Terminal" order="8" />
       <window_info id="Capture Tool" order="3" />
@@ -775,7 +781,8 @@
     <MESSAGE value="lockality add" />
     <MESSAGE value="status and request" />
     <MESSAGE value="email" />
-    <option name="LAST_COMMIT_MESSAGE" value="email" />
+    <MESSAGE value="site" />
+    <option name="LAST_COMMIT_MESSAGE" value="site" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -832,13 +839,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/local/lib/python3.6/dist-packages/googlemaps/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="50" column="9" selection-start-line="50" selection-start-column="9" selection-end-line="50" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/local/lib/python3.6/dist-packages/googlemaps/distance_matrix.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1920">
@@ -1171,8 +1171,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/request_new_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
+        <state relative-caret-position="585">
           <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="101" column="25" selection-start-line="101" selection-start-column="25" selection-end-line="101" selection-end-column="25" />
         </state>
       </provider>
     </entry>

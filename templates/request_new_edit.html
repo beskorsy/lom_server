@@ -1,0 +1,132 @@
+{% extends 'base.html' %}
+{% load material_form %}
+
+{% block content %}
+    <h1>Оформить заказ</h1>
+    <div class="col s12 m8">
+        <form method="POST">
+            {% csrf_token %}
+            {% form form=form %}
+            {% endform %}
+            <button type="submit" class="btn btn-primary">Заказать</button>
+        </form>
+    </div>
+    <div class="col">
+        <h5 id="discount"></h5>
+        <h5 id="price"></h5>
+        <h5 id="cost"></h5>
+    </div>
+    <script>
+
+        jQuery(function ($) {
+            $("#id_phone").mask("+7(999)999-9999");
+        });
+        jQuery(function ($) {
+            $("#id_data").mask("99.99.2099");
+        });
+
+        var transports;
+        var scrapyards;
+        var excessFare = 0;
+        var price = 0;
+        var cost = 0;
+
+        function setPrice() {
+            price = parseFloat(scrapyards[$("#id_scrapyard").prop('selectedIndex')].price) + excessFare * distance / 1000;
+            $("#price").text("Цена закупки за тонну: " + price.toFixed(2));
+        }
+
+        function setCost() {
+            var number = parseFloat(transports[$("#id_transport").prop('selectedIndex')].price);
+            cost = number * distance / 1000;
+            $("#cost").text("Стоимость доставки: " + cost.toFixed(2));
+        }
+
+        var distance = 0;
+        $.ajax({
+            url: '../api/data/',
+            dataType: 'json',
+            success: function (data) {
+                transports = data.transports;
+                scrapyards = data.scrapyards;
+                excessFare = 1;
+                $("#id_locality").prop('selectedIndex', 0).formSelect().change();
+
+                setPrice();
+            }
+        });
+
+
+        $("#id_phone").change("input", function () {
+            var val = $("#id_phone").val();
+            $.ajax({
+                url: '../customer/',
+                data: 'phone=' + val.substring(0, 2) + val.substring(3, 6) + val.substring(7, 10) + val.substring(11),
+                dataType: 'json',
+                success: function (data) {
+                    if (data.length > 0) {
+                        $("#discount").text("Доплата по карте за тонну: " + data[0].discount);
+                    }
+                }
+            });
+        });
+
+
+        $("#id_scrapyard").change("input", function () {
+            setPrice();
+        });
+
+
+        $("#id_transport").change("input", function () {
+            setCost();
+        });
+
+
+        $("#id_tonn").change("input", function () {
+            var val = parseInt($("#id_tonn").val(), 10);
+
+            if (val > 0) {
+                for (i = 0; i < transports.length; i++) {
+                    if (val <= transports[i].tonn) {
+                        $("#id_transport").prop('selected', true).prop('selectedIndex', i).formSelect();
+                        return;
+                    }
+                }
+            }
+        });
+
+        $("#id_locality").change("input", function () {
+            var val = $("#id_locality").val();
+
+            $.ajax({
+                url: '../locality/',
+                data: 'name=' + val,
+                dataType: 'json',
+                success: function (data) {
+                    if (data.length > 0) {
+                        var local = data[0];
+                        var db = local.distanceBelogorsk;
+                        var ds = local.distanceSkovorodino;
+                        var dt = local.distanceTygda;
+
+                        if (dt < ds && dt < db) {
+                            $("#id_scrapyard").prop('selectedIndex', 1).formSelect();
+                            distance = dt;
+                        } else if (db < ds && db < dt) {
+                            $("#id_scrapyard").prop('selectedIndex', 0).formSelect();
+                            distance = db;
+                        } else if (ds < db && ds < dt) {
+                            $("#id_scrapyard").prop('selectedIndex', 2).formSelect();
+                            distance = ds;
+                        }
+                        setCost();
+                        setPrice();
+                    }
+                }
+            });
+        });
+
+
+    </script>
+{% endblock %}
+

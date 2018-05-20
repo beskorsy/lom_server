@@ -39,16 +39,14 @@ class RequestForm(forms.Form):
     # if (context.calculatedInPlace):
     calculatedInPlace = forms.BooleanField(label='Рассщет на месте', required=False)
 
+    comment = forms.CharField(widget=forms.Textarea, label='Комментарий к заказу', required=False)
 
-comment = forms.CharField(widget=forms.Textarea, label='Комментарий к заказу', required=False)
-
-layout = Layout('phone', 'locality', 'address',
-                Row('transport', 'scrapyard'),
-                'tonn', 'data',
-                Row('cutter', 'loader', 'calculatedInPlace'),
-                'comment'
-                )
-
+    layout = Layout('phone', 'locality', 'address',
+                    Row('transport', 'scrapyard'),
+                    'tonn', 'data',
+                    Row('cutter', 'loader', 'calculatedInPlace'),
+                    'comment'
+                    )
 
 # def clean_phone(self):
 #     message = self.cleaned_data['phone']

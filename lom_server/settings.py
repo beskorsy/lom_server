@@ -45,6 +45,8 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'phonenumber_field',
+    'material',
+    'material.frontend',
     # 'djng',
 ]
 
@@ -136,25 +138,11 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = False
-
-
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/2.0/howto/static-files/
-
-STATICFILES_FINDERS = [
-    'django.contrib.staticfiles.finders.FileSystemFinder',
-    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
-
-]
-
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "board", "static"),
-    os.path.join(BASE_DIR, "staticfiles"),
-]
-
-STATIC_ROOT = os.path.join(BASE_DIR, "static")
+STATICFILES_DIRS = ( os.path.join('static'), )
 ADMIN_TOOLS_THEMING_CSS = 'css/theming.css'
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin_tool/"
 

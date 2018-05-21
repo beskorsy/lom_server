@@ -33,11 +33,11 @@ class RequestForm(forms.Form):
     data = forms.CharField(max_length=10, label='Желаемая дата вывоза', required=False)
 
     # if (context.cutter):
-    cutter = forms.BooleanField(label='Резщики', required=False)
+    cutter = forms.BooleanField(label='Резчики', required=False)
     # if (context.loader):
-    loader = forms.BooleanField(label='Грезщики', required=False)
+    loader = forms.BooleanField(label='Грезчики', required=False)
     # if (context.calculatedInPlace):
-    calculatedInPlace = forms.BooleanField(label='Рассщет на месте', required=False)
+    calculatedInPlace = forms.BooleanField(label='Рассчёт на месте', required=False)
 
     comment = forms.CharField(widget=forms.Textarea, label='Комментарий к заказу', required=False)
 

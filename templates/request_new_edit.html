@@ -3,7 +3,8 @@
 
 {% block content %}
     <h1>Оформить заказ</h1>
-    <div class="col s12 m8">
+
+    <div class="col s12 m7">
         <form method="POST">
             {% csrf_token %}
             {% form form=form %}
@@ -27,19 +28,21 @@
 
         var transports;
         var scrapyards;
+        var locality;
         var excessFare = 0;
         var price = 0;
         var cost = 0;
 
         function setPrice() {
-            price = parseFloat(scrapyards[$("#id_scrapyard").prop('selectedIndex')].price) + excessFare * distance / 1000;
-            $("#price").text("Цена закупки за тонну: " + price.toFixed(2));
+            var number = parseFloat(scrapyards[$("#id_scrapyard").prop('selectedIndex')].price);
+            price = number + excessFare * distance / 1000;
+            $("#price").text("Цена закупки за тонну: " + price.toFixed(2) + ' руб.');
         }
 
         function setCost() {
             var number = parseFloat(transports[$("#id_transport").prop('selectedIndex')].price);
             cost = number * distance / 1000;
-            $("#cost").text("Стоимость доставки: " + cost.toFixed(2));
+            $("#cost").text("Стоимость доставки: " + cost.toFixed(2) + ' руб.');
         }
 
         var distance = 0;
@@ -53,6 +56,7 @@
                 $("#id_locality").prop('selectedIndex', 0).formSelect().change();
 
                 setPrice();
+                setCost();
             }
         });
 
@@ -65,7 +69,10 @@
                 dataType: 'json',
                 success: function (data) {
                     if (data.length > 0) {
-                        $("#discount").text("Доплата по карте за тонну: " + data[0].discount);
+                        $("#discount").text("Доплата по карте за тонну: " + data[0].discount + ' руб.');
+
+                        setCost();
+                        setPrice();
                     }
                 }
             });
@@ -73,6 +80,15 @@
 
 
         $("#id_scrapyard").change("input", function () {
+            if ($("#id_scrapyard").prop('selectedIndex') == 0) {
+                distance = locality.distanceBelogorsk;
+            } else if ($("#id_scrapyard").prop('selectedIndex') == 1) {
+                distance = locality.distanceTygda;
+            } else {
+                distance = locality.distanceSkovorodino;
+            }
+
+            setCost();
             setPrice();
         });
 
@@ -104,10 +120,10 @@
                 dataType: 'json',
                 success: function (data) {
                     if (data.length > 0) {
-                        var local = data[0];
-                        var db = local.distanceBelogorsk;
-                        var ds = local.distanceSkovorodino;
-                        var dt = local.distanceTygda;
+                        locality = data[0];
+                        var db = locality.distanceBelogorsk;
+                        var ds = locality.distanceSkovorodino;
+                        var dt = locality.distanceTygda;
 
                         if (dt < ds && dt < db) {
                             $("#id_scrapyard").prop('selectedIndex', 1).formSelect();

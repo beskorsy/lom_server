@@ -1,9 +1,10 @@
 # from django.http import JsonResponse
+from django.core.mail import EmailMessage
 from django.shortcuts import render
 from rest_framework import generics
 
 # from api.form import SubscribeForm, AddressForm
-from .models import Data, Locality, Scrapyard, Transport, Customer, Request
+from .models import Data, Locality, Scrapyard, Transport, Customer, Request, Email
 from .serializers import DataSerializer, CustomerSerializer, LocalitySerializer, ScrapyardSerializer, \
     TransportSerializer, RequestSerializer
 from .forms import RequestForm
@@ -95,29 +96,9 @@ class CustomerListView(generics.ListAPIView):
         return queryset
 
 
-# class CreateLocalityView(generics.ListCreateAPIView):
-#     """This class defines the create behavior of our rest api."""
-#     queryset = Locality.objects.all()
-#     serializer_class = LocalitySerializer
-#
-#     def perform_create(self, serializer):
-#         """Save the post data when creating a new bucketlist."""
-#         serializer.save()
-#
-#
-# class DetailsLocalityView(generics.RetrieveUpdateDestroyAPIView):
-#     """This class handles the http GET, PUT and DELETE requests."""
-#
-#     queryset = Locality.objects.all()
-#     serializer_class = LocalitySerializer
-
-#
 def post_list(request):
     objects = Data.objects.all()
     queryset = objects.get(pk=1)
-    # make sure to catch 404's below
-
-    # posts = Data.objects.all()
 
     return render(request, 'post_list.html', {'datas': queryset.scrapyards.all()})
 
@@ -125,9 +106,31 @@ def post_list(request):
 def requestnew(request):
     if request.method == "POST":
         form = RequestForm(request.POST)
-        # if form.is_valid():
-        #     r = form.save()
-        #     r.save()
+        if form.is_valid():
+            req = Request()
+            req.phone = form.cleaned_data['phone']
+            req.loader = False
+            req.cutter = False
+            req.calculatedInPlace = False
+            req.discount = 0
+            req.locality = form.cleaned_data['locality']
+            req.address = form.cleaned_data['address']
+            req.scrapyard = form.cleaned_data['scrapyard']
+            req.distantce = 0
+            req.transport = form.cleaned_data['transport']
+            req.cost = 0
+            req.tonn = form.cleaned_data['tonn']
+            req.data = form.cleaned_data['data']
+            req.comment = form.cleaned_data['comment']
+            req.createdDate = 0
+            req.price = 0
+            req.save()
+
+            emails = list(Email.objects.all().values_list("email", flat=True))
+            email = EmailMessage('Заказ номер ' + req.id.__str__() + ' Телефон ' + req.phone,
+                             'Заказ: ' + req.__str__() + '\n Заказ сделан через сайт.', to=emails)
+            email.send()
+            form = RequestForm()
     else:
         form = RequestForm()
 

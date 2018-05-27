@@ -15,7 +15,9 @@ class RequestForm(forms.Form):
     objects = Data.objects.all()
     context = objects.get(pk=1)
 
-    phone = forms.CharField(max_length=17, label='Телефон')
+    phone = forms.CharField(max_length=17, label='Телефон', error_messages={
+        'required': 'Необходимо ввести номер телефона!'
+    })
 
     localitys = [(x, x) for x in Locality.objects.order_by('name')]
     locality = forms.ChoiceField(choices=localitys, label='Населенный пункт')
@@ -32,19 +34,19 @@ class RequestForm(forms.Form):
 
     data = forms.CharField(max_length=10, label='Желаемая дата вывоза', required=False)
 
-    # if (context.cutter):
-    cutter = forms.BooleanField(label='Резчики', required=False)
-    # if (context.loader):
-    loader = forms.BooleanField(label='Грезчики', required=False)
-    # if (context.calculatedInPlace):
-    calculatedInPlace = forms.BooleanField(label='Рассчёт на месте', required=False)
+    # # if (context.cutter):
+    # cutter = forms.BooleanField(label='Резчики', required=False)
+    # # if (context.loader):
+    # loader = forms.BooleanField(label='Грезчики', required=False)
+    # # if (context.calculatedInPlace):
+    # calculatedInPlace = forms.BooleanField(label='Рассчёт на месте', required=False)
 
     comment = forms.CharField(widget=forms.Textarea, label='Комментарий к заказу', required=False)
 
     layout = Layout('phone', 'locality', 'address',
                     Row('transport', 'scrapyard'),
                     'tonn', 'data',
-                    Row('cutter', 'loader', 'calculatedInPlace'),
+                    # Row('cutter', 'loader', 'calculatedInPlace'),
                     'comment'
                     )
 

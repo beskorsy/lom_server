@@ -146,6 +146,8 @@ STATICFILES_DIRS = ( os.path.join('static'), )
 ADMIN_TOOLS_THEMING_CSS = 'css/theming.css'
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin_tool/"
 
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
+
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'

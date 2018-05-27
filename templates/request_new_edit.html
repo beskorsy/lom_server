@@ -4,20 +4,68 @@
 {% block content %}
     <h1>Оформить заказ</h1>
 
-    <div class="col s12 m7">
-        <form method="POST">
+    <div class="col s7">
+        <form method="POST" id="post-form">
             {% csrf_token %}
             {% form form=form %}
             {% endform %}
             <button type="submit" class="btn btn-primary">Заказать</button>
         </form>
     </div>
-    <div class="col">
+    <div class="col s5">
         <h5 id="discount"></h5>
         <h5 id="price"></h5>
         <h5 id="cost"></h5>
     </div>
+
     <script>
+
+        $('#post-form').on('submit', function (event) {
+            event.preventDefault();
+            console.log("form submitted!");
+            create_post();
+        });
+
+        function create_post() {
+            console.log("create post is working!");
+            $.ajax({
+                url: "../requestadd/",
+                type: "POST",
+                data: {
+                    phone: phone,
+                    loader: false,
+                    cutter: false,
+                    calculatedInPlace: false,
+                    discount: discount,
+                    locality: locality.name,
+                    address: $("#address").val(),
+                    scrapyard: scrapyards[$("#id_scrapyard").prop('selectedIndex')].name,
+                    distantce: distance,
+                    transport: transports[$("#id_transport").prop('selectedIndex')].name,
+                    cost: cost,
+                    tonn: $("#id_tonn").val(),
+                    data: $("#id_data").val(),
+                    comment: $("#id_comment").val(),
+                    price: price
+                },
+
+                success: function (json) {
+                    alert('Заказ совершен! Оператор свяжится с вами в ближайшее время. Вы можете разместить новый заказ прямо сейчас.');
+
+                    location.reload();
+
+                    console.log(json);
+                    console.log("success");
+                },
+
+                error: function (xhr, errmsg, err) {
+                    $('#results').html("<div class='alert-box alert radius' data-alert>Oops! We have encountered an error: " + errmsg +
+                        " <a href='#' class='close'>&times;</a></div>");
+                    console.log(xhr.status + ": " + xhr.responseText);
+                    alert('Ошибка! Повторите позже.');
+                }
+            });
+        }
 
         jQuery(function ($) {
             $("#id_phone").mask("+7(999)999-9999");
@@ -32,6 +80,9 @@
         var excessFare = 0;
         var price = 0;
         var cost = 0;
+        var discount = 0;
+        var distance = 0;
+        var phone;
 
         function setPrice() {
             var number = parseFloat(scrapyards[$("#id_scrapyard").prop('selectedIndex')].price);
@@ -45,7 +96,28 @@
             $("#cost").text("Стоимость доставки: " + cost.toFixed(2) + ' руб.');
         }
 
-        var distance = 0;
+        function checkPhone() {
+            var val = $("#id_phone").val();
+            $("#discount").text("");
+            phone = val.substring(0, 2) + val.substring(3, 6) + val.substring(7, 10) + val.substring(11);
+            if (phone.charAt(11) !== '_') {
+                $.ajax({
+                    url: '../customer/',
+                    data: 'phone=' + phone,
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.length > 0) {
+                            discount = data[0].discount;
+                            $("#discount").text("Доплата по карте за тонну: " + discount + ' руб.');
+
+                            setCost();
+                            setPrice();
+                        }
+                    }
+                });
+            }
+        }
+
         $.ajax({
             url: '../api/data/',
             dataType: 'json',
@@ -60,22 +132,11 @@
             }
         });
 
+        checkPhone();
 
-        $("#id_phone").change("input", function () {
-            var val = $("#id_phone").val();
-            $.ajax({
-                url: '../customer/',
-                data: 'phone=' + val.substring(0, 2) + val.substring(3, 6) + val.substring(7, 10) + val.substring(11),
-                dataType: 'json',
-                success: function (data) {
-                    if (data.length > 0) {
-                        $("#discount").text("Доплата по карте за тонну: " + data[0].discount + ' руб.');
 
-                        setCost();
-                        setPrice();
-                    }
-                }
-            });
+        $("#id_phone").on('input keyup', function (e) {
+            checkPhone();
         });
 
 
@@ -98,7 +159,7 @@
         });
 
 
-        $("#id_tonn").change("input", function () {
+        $("#id_tonn").on('input keyup', function () {
             var val = parseInt($("#id_tonn").val(), 10);
 
             if (val > 0) {
@@ -108,6 +169,7 @@
                         return;
                     }
                 }
+                $("#id_transport").prop('selected', true).prop('selectedIndex', i - 1).formSelect();
             }
         });
 
@@ -141,8 +203,5 @@
                 }
             });
         });
-
-
     </script>
 {% endblock %}
-

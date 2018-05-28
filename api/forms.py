@@ -24,7 +24,7 @@ class RequestForm(forms.Form):
 
     address = forms.CharField(max_length=50, label='Точный адрес вывоза', required=False)
 
-    transports = [(x, "{} (до {} тонн) - {} руб\км".format(x.name, x.tonn, x.price)) for x in context.transports.all()]
+    transports = [(x, "{} (до {} тонн)".format(x.name, x.tonn, x.price)) for x in context.transports.all()]
     transport = forms.ChoiceField(choices=transports, label='Вид траспорта')
 
     scrapyards = [(x, x) for x in context.scrapyards.all()]

@@ -21,9 +21,13 @@
     <script>
 
         $('#post-form').on('submit', function (event) {
-            event.preventDefault();
-            console.log("form submitted!");
-            create_post();
+            if ($("#id_phone").val().length > 0) {
+                event.preventDefault();
+                console.log("form submitted!");
+                create_post();
+            } else {
+                $("#id_phone").ajaxError();
+            }
         });
 
         function create_post() {

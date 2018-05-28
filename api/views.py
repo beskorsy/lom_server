@@ -107,29 +107,29 @@ def requestnew(request):
     if request.method == "POST":
         form = RequestForm(request.POST)
         if form.is_valid():
-            req = Request()
-            req.phone = form.cleaned_data['phone']
-            req.loader = False
-            req.cutter = False
-            req.calculatedInPlace = False
-            req.discount = 0
-            req.locality = form.cleaned_data['locality']
-            req.address = form.cleaned_data['address']
-            req.scrapyard = form.cleaned_data['scrapyard']
-            req.distantce = 0
-            req.transport = form.cleaned_data['transport']
-            req.cost = 0
-            req.tonn = form.cleaned_data['tonn']
-            req.data = form.cleaned_data['data']
-            req.comment = form.cleaned_data['comment']
-            req.createdDate = 0
-            req.price = 0
-            req.save()
-
-            emails = list(Email.objects.all().values_list("email", flat=True))
-            email = EmailMessage('Заказ номер ' + req.id.__str__() + ' Телефон ' + req.phone,
-                             'Заказ: ' + req.__str__() + '\n Заказ сделан через сайт.', to=emails)
-            email.send()
+            # req = Request()
+            # req.phone = form.cleaned_data['phone']
+            # req.loader = False
+            # req.cutter = False
+            # req.calculatedInPlace = False
+            # req.discount = 0
+            # req.locality = form.cleaned_data['locality']
+            # req.address = form.cleaned_data['address']
+            # req.scrapyard = form.cleaned_data['scrapyard']
+            # req.distantce = 0
+            # req.transport = form.cleaned_data['transport']
+            # req.cost = 0
+            # req.tonn = form.cleaned_data['tonn']
+            # req.data = form.cleaned_data['data']
+            # req.comment = form.cleaned_data['comment']
+            # req.createdDate = 0
+            # req.price = 0
+            # req.save()
+            #
+            # emails = list(Email.objects.all().values_list("email", flat=True))
+            # email = EmailMessage('Заказ номер ' + req.id.__str__() + ' Телефон ' + req.phone,
+            #                  'Заказ: ' + req.__str__() + '\n Заказ сделан через сайт.', to=emails)
+            # email.send()
             form = RequestForm()
     else:
         form = RequestForm()

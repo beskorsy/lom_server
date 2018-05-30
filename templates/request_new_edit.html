@@ -16,6 +16,9 @@
         <h5 id="discount"></h5>
         <h5 id="price"></h5>
         <h5 id="cost"></h5>
+        <iframe width="560" height="315"
+                src="https://www.youtube.com/embed/6PoBtDcmAAY?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+                allow="autoplay; encrypted-media" allowfullscreen></iframe>
     </div>
 
     <script>
@@ -102,23 +105,28 @@
 
         function checkPhone() {
             var val = $("#id_phone").val();
-            $("#discount").text("");
-            phone = val.substring(0, 2) + val.substring(3, 6) + val.substring(7, 10) + val.substring(11);
-            if (phone.charAt(11) !== '_') {
-                $.ajax({
-                    url: '../customer/',
-                    data: 'phone=' + phone,
-                    dataType: 'json',
-                    success: function (data) {
-                        if (data.length > 0) {
-                            discount = data[0].discount;
-                            $("#discount").text("Доплата по карте за тонну: " + discount + ' руб.');
+            var newPhone = val.substring(0, 2) + val.substring(3, 6) + val.substring(7, 10) + val.substring(11);
+            if (newPhone !== phone) {
+                $("#discount").text("");
+                phone = "";
 
-                            setCost();
-                            setPrice();
+                if (newPhone.charAt(11) !== '_') {
+                    phone = newPhone;
+                    $.ajax({
+                        url: '../customer/',
+                        data: 'phone=' + phone,
+                        dataType: 'json',
+                        success: function (data) {
+                            if (data.length > 0) {
+                                discount = data[0].discount;
+                                $("#discount").text("Доплата по карте за тонну: " + discount + ' руб.');
+
+                                setCost();
+                                setPrice();
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
         }
 

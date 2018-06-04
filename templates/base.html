@@ -19,6 +19,8 @@
         <div class="col">
             <h1>Больше лома - больше денег</h1>
             <h4><a href="http://bolsheloma.ru/">Условия программы</a></h4>
+            <h6>8-914-570-03-04</h6>
+            <h6>8-924-844-40-09</h6>
         </div>
 
         <div class="col right">
@@ -27,6 +29,25 @@
                      alt='Доступно в Google Play'
                      src='https://play.google.com/intl/en_us/badges/images/generic/ru_badge_web_generic.png'/>
             </a>
+
+            <div id="ok_group_widget"></div>
+            <script>
+                !function (d, id, did, st) {
+                    var js = d.createElement("script");
+                    js.src = "https://connect.ok.ru/connect.js";
+                    js.onload = js.onreadystatechange = function () {
+                        if (!this.readyState || this.readyState == "loaded" || this.readyState == "complete") {
+                            if (!this.executed) {
+                                this.executed = true;
+                                setTimeout(function () {
+                                    OK.CONNECT.insertGroupWidget(id, did, st);
+                                }, 0);
+                            }
+                        }
+                    }
+                    d.documentElement.appendChild(js);
+                }(document, "ok_group_widget", "55189202469104", '{"width":200,"height":135}');
+            </script>
         </div>
     </div>
 </div>
@@ -35,6 +56,15 @@
         {% block content %}
         {% endblock %}
     </div>
+</div>
+<div class="content container">
+    <h6>График работы и адреса металлоприемок:</h6>
+    <p>1) г. Белогорск, улица 9 мая 210, график работы: пн-пт с 8:00 до 17:00, перерыв на обед: с 12 до 13,суббота с
+        8:00 до 16 :00, воскресенье- выходной</p>
+    <p>2) г. Сковородино, улица Красноармейская д. 73 , график работы: пн-пт с 9:00 до 18:00, перерыв на обед с 13 до
+        14, суббота с 9:00 до 17:00, вск-выходной. Тел:8-914-569-60-11</p>
+    <p>3) г. Тыгда, ул.Станционная, 27, график работы : пн.-пятн. с 9 до 18 ;перерыв на обед с 13-14 ;выходной:
+        субб.-воскр. тел.8-914-605-16-60</p>
 </div>
 </body>
 </html>

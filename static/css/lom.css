@@ -15,8 +15,12 @@
     font-size: 24pt;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, h6 {
     font-family: 'Oswald', bold, serif;
+}
+
+p {
+    font-family: 'Oswald', serif;
 }
 
 h5 {

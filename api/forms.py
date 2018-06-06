@@ -37,7 +37,7 @@ class RequestForm(forms.Form):
     # # if (context.cutter):
     # cutter = forms.BooleanField(label='Резчики', required=False)
     # # if (context.loader):
-    # loader = forms.BooleanField(label='Грезчики', required=False)
+    # loader = forms.BooleanField(label='Грузчики', required=False)
     # # if (context.calculatedInPlace):
     # calculatedInPlace = forms.BooleanField(label='Рассчёт на месте', required=False)
 

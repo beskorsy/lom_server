@@ -109,14 +109,14 @@ class Request(models.Model):
         """Return a human readable representation of the model instance."""
         return "\nНомер заказа: {}\n" \
                "Номер телефона: {}. Доплата по статусу: {}. \n" \
-               "Наседенный пункт: {}. Адрес: {}\n" \
+               "Населённый пункт: {}. Адрес: {}\n" \
                "Пункт приема: {}. Растояние {} метров\n" \
                "Цена за тонну: {}.\n" \
                "Транспорт: {}. Вес: {}\n" \
                "Стоимость доставки: {}\n" \
                "Дата: {}\n" \
                "Комментарий: {}\n" \
-               "Грузщики: {}. Резчики: {}. Рассчет на месте: {}\n" \
+               "Грузчики: {}. Резчики: {}. Рассчет на месте: {}\n" \
                "Дата создания запроса: {}".format(self.id.__str__(), self.phone, self.discount, self.locality,
                                                   self.address, self.scrapyard, self.distantce, self.price,
                                                   self.transport, self.tonn, self.cost, self.data, self.comment,

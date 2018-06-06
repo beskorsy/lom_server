@@ -54,4 +54,14 @@ h5 {
         width: 230px;
         height: 156px;
     }
+    .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+        color: #263238;
+        font-size: 24pt;
+        text-decoration: none;
+    }
+
+    .page-header h4 a {
+        color: #263238;
+        font-size: 18pt;
+    }
 }

@@ -5,13 +5,460 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="250357b7-8756-4081-bcc9-4c2e471c19b2" name="Default" comment="site">
+      <change afterPath="$PROJECT_DIR$/templates/role.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lom_server/static/css/lom.css" beforeDir="false" afterPath="$PROJECT_DIR$/lom_server/static/css/lom.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/lom.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/lom.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/lom_server/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/css/lom.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/js/maskedinput.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/fixedHeader.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/jquery.datetimepicker.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/material.forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/materialize.admin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/materialize.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/materialize.forms.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/materialize.frontend.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/materialize.frontend.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/perfect-scrollbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/css/responsive.dataTables.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.ijmap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/codepoints" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/material-design-icons/material-icons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Black.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Black.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Black.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Black.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Light.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Light.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Light.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Light.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-black-italic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-black.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-bold-italic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-bold.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-italic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-light-italic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-light.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-medium-italic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-medium.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-thin-italic.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-thin.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/fonts/roboto/style.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/imgs/background.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/imgs/favicon.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/imgs/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/imgs/sidenav.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/imgs/user.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/dataTables.fixedHeader.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/dataTables.responsive.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/jquery.activeNavigation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/jquery.dataTables.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/jquery.datetimepicker.full.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/jquery.formset.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/materialize.forms.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/materialize.frontend.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/materialize.frontend.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/materialize.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/perfect-scrollbar.jquery.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/js/turbolinks.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/sass/_variables.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/sass/materialize.admin.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/sass/materialize.forms.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/sass/materialize.frontend.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/material/sass/materialize.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/media/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/css/bootstrap-tweaks.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/css/default.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/css/prettify.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/css/base.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/css/bootstrap-theme.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/css/font-awesome-4.0.3.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/css/highlight.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/css/jquery.json-view.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/img/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/img/grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/js/api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/js/highlight.pack.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/js/jquery-1.10.2.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/docs/js/jquery.json-view.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/img/glyphicons-halflings-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/img/glyphicons-halflings.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/img/grid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/js/ajax-form.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/js/coreapi-0.1.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/js/csrf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/js/default.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/js/jquery-1.12.4.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lom_server/static/rest_framework/js/prettify-min.js" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/request_new_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/request_new_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/post_list.html" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
+    <ignored path="lom_server/static/admin/css/vendor/select2/LICENSE-SELECT2.md" />
+    <ignored path="lom_server/static/admin/css/vendor/select2/select2.css" />
+    <ignored path="lom_server/static/admin/css/vendor/select2/select2.min.css" />
+    <ignored path="lom_server/static/admin/css/autocomplete.css" />
+    <ignored path="lom_server/static/admin/css/base.css" />
+    <ignored path="lom_server/static/admin/css/changelists.css" />
+    <ignored path="lom_server/static/admin/css/dashboard.css" />
+    <ignored path="lom_server/static/admin/css/fonts.css" />
+    <ignored path="lom_server/static/admin/css/forms.css" />
+    <ignored path="lom_server/static/admin/css/login.css" />
+    <ignored path="lom_server/static/admin/css/responsive.css" />
+    <ignored path="lom_server/static/admin/css/responsive_rtl.css" />
+    <ignored path="lom_server/static/admin/css/rtl.css" />
+    <ignored path="lom_server/static/admin/css/widgets.css" />
+    <ignored path="lom_server/static/admin/fonts/LICENSE.txt" />
+    <ignored path="lom_server/static/admin/fonts/README.txt" />
+    <ignored path="lom_server/static/admin/fonts/Roboto-Bold-webfont.woff" />
+    <ignored path="lom_server/static/admin/fonts/Roboto-Light-webfont.woff" />
+    <ignored path="lom_server/static/admin/fonts/Roboto-Regular-webfont.woff" />
+    <ignored path="lom_server/static/admin/img/gis/move_vertex_off.svg" />
+    <ignored path="lom_server/static/admin/img/gis/move_vertex_on.svg" />
+    <ignored path="lom_server/static/admin/img/calendar-icons.svg" />
+    <ignored path="lom_server/static/admin/img/icon-addlink.svg" />
+    <ignored path="lom_server/static/admin/img/icon-alert.svg" />
+    <ignored path="lom_server/static/admin/img/icon-calendar.svg" />
+    <ignored path="lom_server/static/admin/img/icon-changelink.svg" />
+    <ignored path="lom_server/static/admin/img/icon-clock.svg" />
+    <ignored path="lom_server/static/admin/img/icon-deletelink.svg" />
+    <ignored path="lom_server/static/admin/img/icon-no.svg" />
+    <ignored path="lom_server/static/admin/img/icon-unknown-alt.svg" />
+    <ignored path="lom_server/static/admin/img/icon-unknown.svg" />
+    <ignored path="lom_server/static/admin/img/icon-yes.svg" />
+    <ignored path="lom_server/static/admin/img/inline-delete.svg" />
+    <ignored path="lom_server/static/admin/img/LICENSE" />
+    <ignored path="lom_server/static/admin/img/README.txt" />
+    <ignored path="lom_server/static/admin/img/search.svg" />
+    <ignored path="lom_server/static/admin/img/selector-icons.svg" />
+    <ignored path="lom_server/static/admin/img/sorting-icons.svg" />
+    <ignored path="lom_server/static/admin/img/tooltag-add.svg" />
+    <ignored path="lom_server/static/admin/img/tooltag-arrowright.svg" />
+    <ignored path="lom_server/static/admin/js/admin/DateTimeShortcuts.js" />
+    <ignored path="lom_server/static/admin/js/admin/RelatedObjectLookups.js" />
+    <ignored path="lom_server/static/admin/js/vendor/jquery/jquery.js" />
+    <ignored path="lom_server/static/admin/js/vendor/jquery/jquery.min.js" />
+    <ignored path="lom_server/static/admin/js/vendor/jquery/LICENSE-JQUERY.txt" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/ar.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/az.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/bg.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/ca.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/cs.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/da.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/de.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/el.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/en.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/es.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/et.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/eu.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/fa.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/fi.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/fr.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/gl.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/he.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/hi.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/hr.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/hu.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/id.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/is.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/it.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/ja.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/km.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/ko.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/lt.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/lv.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/mk.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/ms.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/nb.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/nl.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/pl.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/pt-BR.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/pt.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/ro.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/ru.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/sk.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/sr-Cyrl.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/sr.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/sv.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/th.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/tr.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/uk.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/vi.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/zh-CN.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/i18n/zh-TW.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/LICENSE-SELECT2.md" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/select2.full.js" />
+    <ignored path="lom_server/static/admin/js/vendor/select2/select2.full.min.js" />
+    <ignored path="lom_server/static/admin/js/vendor/xregexp/LICENSE-XREGEXP.txt" />
+    <ignored path="lom_server/static/admin/js/vendor/xregexp/xregexp.js" />
+    <ignored path="lom_server/static/admin/js/vendor/xregexp/xregexp.min.js" />
+    <ignored path="lom_server/static/admin/js/actions.js" />
+    <ignored path="lom_server/static/admin/js/actions.min.js" />
+    <ignored path="lom_server/static/admin/js/autocomplete.js" />
+    <ignored path="lom_server/static/admin/js/calendar.js" />
+    <ignored path="lom_server/static/admin/js/cancel.js" />
+    <ignored path="lom_server/static/admin/js/change_form.js" />
+    <ignored path="lom_server/static/admin/js/collapse.js" />
+    <ignored path="lom_server/static/admin/js/collapse.min.js" />
+    <ignored path="lom_server/static/admin/js/core.js" />
+    <ignored path="lom_server/static/admin/js/inlines.js" />
+    <ignored path="lom_server/static/admin/js/inlines.min.js" />
+    <ignored path="lom_server/static/admin/js/jquery.init.js" />
+    <ignored path="lom_server/static/admin/js/popup_response.js" />
+    <ignored path="lom_server/static/admin/js/prepopulate.js" />
+    <ignored path="lom_server/static/admin/js/prepopulate.min.js" />
+    <ignored path="lom_server/static/admin/js/prepopulate_init.js" />
+    <ignored path="lom_server/static/admin/js/SelectBox.js" />
+    <ignored path="lom_server/static/admin/js/SelectFilter2.js" />
+    <ignored path="lom_server/static/admin/js/timeparse.js" />
+    <ignored path="lom_server/static/admin/js/urlify.js" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/animated-overlay.gif" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_flat_75_ffffff_40x100.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_glass_65_ffffff_1x400.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_glass_75_dadada_1x400.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-icons_222222_256x240.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-icons_2e83ff_256x240.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-icons_454545_256x240.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-icons_888888_256x240.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/images/ui-icons_cd0a0a_256x240.png" />
+    <ignored path="lom_server/static/admin_tools/css/jquery/jquery-ui.css" />
+    <ignored path="lom_server/static/admin_tools/css/dashboard-ie.css" />
+    <ignored path="lom_server/static/admin_tools/css/dashboard.css" />
+    <ignored path="lom_server/static/admin_tools/css/menu-ie.css" />
+    <ignored path="lom_server/static/admin_tools/css/menu.css" />
+    <ignored path="lom_server/static/admin_tools/css/theming.css" />
+    <ignored path="lom_server/static/admin_tools/images/admin-tools.png" />
+    <ignored path="lom_server/static/admin_tools/images/django.png" />
+    <ignored path="lom_server/static/admin_tools/js/jquery/jquery-ui.min.js" />
+    <ignored path="lom_server/static/admin_tools/js/jquery/jquery.cookie.min.js" />
+    <ignored path="lom_server/static/admin_tools/js/jquery/jquery.dashboard.js" />
+    <ignored path="lom_server/static/admin_tools/js/jquery/jquery.min.js" />
+    <ignored path="lom_server/static/admin_tools/js/dashboard.js" />
+    <ignored path="lom_server/static/admin_tools/js/json.min.js" />
+    <ignored path="lom_server/static/admin_tools/js/menu.js" />
+    <ignored path="lom_server/static/admin_tools/js/utils.js" />
+    <ignored path="lom_server/static/css/lom.css" />
+    <ignored path="lom_server/static/js/maskedinput.js" />
+    <ignored path="lom_server/static/material/css/fixedHeader.dataTables.css" />
+    <ignored path="lom_server/static/material/css/jquery.datetimepicker.css" />
+    <ignored path="lom_server/static/material/css/material.forms.css" />
+    <ignored path="lom_server/static/material/css/materialize.admin.css" />
+    <ignored path="lom_server/static/material/css/materialize.css" />
+    <ignored path="lom_server/static/material/css/materialize.forms.css" />
+    <ignored path="lom_server/static/material/css/materialize.frontend.css" />
+    <ignored path="lom_server/static/material/css/materialize.frontend.min.css" />
+    <ignored path="lom_server/static/material/css/perfect-scrollbar.css" />
+    <ignored path="lom_server/static/material/css/responsive.dataTables.css" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/codepoints" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/material-icons.css" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.eot" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.ijmap" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.svg" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.ttf" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.woff" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/MaterialIcons-Regular.woff2" />
+    <ignored path="lom_server/static/material/fonts/material-design-icons/README.md" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Black.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Black.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Black.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Black.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BlackItalic.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Bold.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-BoldItalic.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Italic.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Light.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Light.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Light.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Light.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-LightItalic.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Medium.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-MediumItalic.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Regular.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-Thin.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.eot" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.ttf" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.woff" />
+    <ignored path="lom_server/static/material/fonts/roboto/fonts/Roboto-ThinItalic.woff2" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-black-italic.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-black.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-bold-italic.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-bold.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-italic.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-light-italic.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-light.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-medium-italic.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-medium.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-thin-italic.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto-thin.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/roboto.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/style.css" />
+    <ignored path="lom_server/static/material/fonts/roboto/style.scss" />
+    <ignored path="lom_server/static/material/imgs/background.svg" />
+    <ignored path="lom_server/static/material/imgs/favicon.png" />
+    <ignored path="lom_server/static/material/imgs/logo.png" />
+    <ignored path="lom_server/static/material/imgs/sidenav.svg" />
+    <ignored path="lom_server/static/material/imgs/user.png" />
+    <ignored path="lom_server/static/material/js/dataTables.fixedHeader.js" />
+    <ignored path="lom_server/static/material/js/dataTables.responsive.js" />
+    <ignored path="lom_server/static/material/js/jquery.activeNavigation.js" />
+    <ignored path="lom_server/static/material/js/jquery.dataTables.js" />
+    <ignored path="lom_server/static/material/js/jquery.datetimepicker.full.js" />
+    <ignored path="lom_server/static/material/js/jquery.formset.js" />
+    <ignored path="lom_server/static/material/js/jquery.js" />
+    <ignored path="lom_server/static/material/js/materialize.forms.js" />
+    <ignored path="lom_server/static/material/js/materialize.frontend.js" />
+    <ignored path="lom_server/static/material/js/materialize.frontend.min.js" />
+    <ignored path="lom_server/static/material/js/materialize.js" />
+    <ignored path="lom_server/static/material/js/perfect-scrollbar.jquery.js" />
+    <ignored path="lom_server/static/material/js/turbolinks.js" />
+    <ignored path="lom_server/static/material/sass/_variables.scss" />
+    <ignored path="lom_server/static/material/sass/materialize.admin.scss" />
+    <ignored path="lom_server/static/material/sass/materialize.forms.scss" />
+    <ignored path="lom_server/static/material/sass/materialize.frontend.scss" />
+    <ignored path="lom_server/static/material/sass/materialize.scss" />
+    <ignored path="lom_server/static/media/logo.png" />
+    <ignored path="lom_server/static/rest_framework/css/bootstrap-tweaks.css" />
+    <ignored path="lom_server/static/rest_framework/css/bootstrap.min.css" />
+    <ignored path="lom_server/static/rest_framework/css/default.css" />
+    <ignored path="lom_server/static/rest_framework/css/prettify.css" />
+    <ignored path="lom_server/static/rest_framework/docs/css/base.css" />
+    <ignored path="lom_server/static/rest_framework/docs/css/bootstrap-theme.min.css" />
+    <ignored path="lom_server/static/rest_framework/docs/css/bootstrap.min.css" />
+    <ignored path="lom_server/static/rest_framework/docs/css/font-awesome-4.0.3.css" />
+    <ignored path="lom_server/static/rest_framework/docs/css/highlight.css" />
+    <ignored path="lom_server/static/rest_framework/docs/css/jquery.json-view.min.css" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.eot" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.svg" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.ttf" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/fontawesome-webfont.woff" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.eot" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.svg" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.ttf" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.woff" />
+    <ignored path="lom_server/static/rest_framework/docs/fonts/glyphicons-halflings-regular.woff2" />
+    <ignored path="lom_server/static/rest_framework/docs/img/favicon.ico" />
+    <ignored path="lom_server/static/rest_framework/docs/img/grid.png" />
+    <ignored path="lom_server/static/rest_framework/docs/js/api.js" />
+    <ignored path="lom_server/static/rest_framework/docs/js/bootstrap.min.js" />
+    <ignored path="lom_server/static/rest_framework/docs/js/highlight.pack.js" />
+    <ignored path="lom_server/static/rest_framework/docs/js/jquery-1.10.2.min.js" />
+    <ignored path="lom_server/static/rest_framework/docs/js/jquery.json-view.min.js" />
+    <ignored path="lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.eot" />
+    <ignored path="lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.svg" />
+    <ignored path="lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.ttf" />
+    <ignored path="lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.woff" />
+    <ignored path="lom_server/static/rest_framework/fonts/glyphicons-halflings-regular.woff2" />
+    <ignored path="lom_server/static/rest_framework/img/glyphicons-halflings-white.png" />
+    <ignored path="lom_server/static/rest_framework/img/glyphicons-halflings.png" />
+    <ignored path="lom_server/static/rest_framework/img/grid.png" />
+    <ignored path="lom_server/static/rest_framework/js/ajax-form.js" />
+    <ignored path="lom_server/static/rest_framework/js/bootstrap.min.js" />
+    <ignored path="lom_server/static/rest_framework/js/coreapi-0.1.1.js" />
+    <ignored path="lom_server/static/rest_framework/js/csrf.js" />
+    <ignored path="lom_server/static/rest_framework/js/default.js" />
+    <ignored path="lom_server/static/rest_framework/js/jquery-1.12.4.min.js" />
+    <ignored path="lom_server/static/rest_framework/js/prettify-min.js" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,77 +482,45 @@
   <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
     <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="-279120874">
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="280" />
+          <entry key="py" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="280" />
+          <entry key="Python" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="5" />
+          <entry key="png" value="1" />
+          <entry key="py" value="1" />
+          <entry key="xml" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="5" />
+          <entry key="Image" value="1" />
+          <entry key="Python" value="1" />
+          <entry key="XML" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/templates/request_new_edit.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="302">
-              <caret line="55" column="82" selection-start-line="55" selection-start-column="82" selection-end-line="55" selection-end-column="82" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lom_server/settings.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1291">
-              <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/models.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="66" column="8" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/static/css/lom.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="29">
-              <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/django/forms/fields.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1974">
-              <caret line="208" column="46" selection-start-line="208" selection-start-column="43" selection-end-line="208" selection-end-column="46" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/base.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="65" column="6" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="6" />
+            <state relative-caret-position="1275">
+              <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
             </state>
           </provider>
         </entry>
@@ -113,11 +528,65 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
-              <caret line="117" column="60" lean-forward="true" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
+            <state relative-caret-position="525">
+              <caret line="85" selection-start-line="85" selection-end-line="85" />
               <folding>
                 <element signature="e#39#80#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/role.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="34" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="34" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/base.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/api/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+              <folding>
+                <element signature="e#0#32#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/lom_server/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="389">
+              <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/css/lom.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-308">
+              <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -136,8 +605,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>data</find>
-      <find>Locality</find>
       <find>dis</find>
       <find>unique</find>
       <find>50</find>
@@ -162,10 +629,12 @@
       <find>mail</find>
       <find>$(&quot;#id_transport&quot;)</find>
       <find>scrapyards</find>
-      <find>min</find>
       <find>mai</find>
       <find>Доплата</find>
+      <find>min</find>
       <find>id_phone</find>
+      <find>tab2</find>
+      <find>800</find>
     </findStrings>
     <replaceStrings>
       <replace>66</replace>
@@ -202,17 +671,18 @@
         <option value="$PROJECT_DIR$/api/form.py" />
         <option value="$PROJECT_DIR$/templates/post_edit.html" />
         <option value="$PROJECT_DIR$/api/serializers.py" />
-        <option value="$PROJECT_DIR$/api/models.py" />
         <option value="$PROJECT_DIR$/static/maskedinput.js" />
-        <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/lom_server/settings.py" />
-        <option value="$PROJECT_DIR$/api/forms.py" />
-        <option value="$PROJECT_DIR$/api/views.py" />
         <option value="$PROJECT_DIR$/lom_server/static/css/lom.css" />
-        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/static/css/lom.css" />
+        <option value="$PROJECT_DIR$/api/forms.py" />
+        <option value="$PROJECT_DIR$/api/models.py" />
+        <option value="$PROJECT_DIR$/templates/role.html" />
+        <option value="$PROJECT_DIR$/templates/base.html" />
         <option value="$PROJECT_DIR$/templates/request_new_edit.html" />
+        <option value="$PROJECT_DIR$/api/views.py" />
+        <option value="$PROJECT_DIR$/api/urls.py" />
+        <option value="$PROJECT_DIR$/lom_server/settings.py" />
       </list>
     </option>
   </component>
@@ -251,6 +721,18 @@
       <dailyData date="5-6-2018">
         <observation name="false" value="14.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="false" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="false" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="false" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="false" value="41.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:liftShorterClasses">
       <dailyData date="27-5-2018">
@@ -264,6 +746,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:middleMatching">
@@ -280,6 +774,18 @@
       <dailyData date="5-6-2018">
         <observation name="false" value="14.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="false" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="false" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="false" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="false" value="41.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:nonGeneric">
       <dailyData date="27-5-2018">
@@ -293,6 +799,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_inResolveScope">
@@ -312,6 +830,24 @@
         <observation name="UNDEFINED" value="8.0" />
         <observation name="false" value="6.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="false" value="4.0" />
+        <observation name="true" value="11.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="true" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="false" value="10.0" />
+        <observation name="true" value="16.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:prox_openedInEditor">
       <dailyData date="27-5-2018">
@@ -329,6 +865,22 @@
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="8.0" />
         <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="false" value="15.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="false" value="26.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameDirectory">
@@ -348,6 +900,22 @@
         <observation name="UNDEFINED" value="8.0" />
         <observation name="false" value="6.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="false" value="15.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="false" value="26.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sameLogicalRoot">
       <dailyData date="27-5-2018">
@@ -365,6 +933,22 @@
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="8.0" />
         <observation name="false" value="6.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="false" value="15.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="false" value="26.0" />
       </dailyData>
     </factor>
     <factor id="binaryFeature:prox_sdkOrLibrary">
@@ -384,6 +968,24 @@
         <observation name="UNDEFINED" value="8.0" />
         <observation name="false" value="6.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="false" value="4.0" />
+        <observation name="true" value="11.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="true" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="false" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="false" value="24.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
     </factor>
     <factor id="binaryFeature:templates">
       <dailyData date="27-5-2018">
@@ -399,6 +1001,20 @@
       <dailyData date="5-6-2018">
         <observation name="false" value="14.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="false" value="21.0" />
+        <observation name="true" value="1.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="false" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="false" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="false" value="39.0" />
+        <observation name="true" value="2.0" />
+      </dailyData>
     </factor>
     <factor id="categoricalFeature:accessible">
       <dailyData date="27-5-2018">
@@ -412,6 +1028,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:expectedType">
@@ -427,6 +1055,18 @@
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
+      </dailyData>
     </factor>
     <factor id="categoricalFeature:kind">
       <dailyData date="27-5-2018">
@@ -440,6 +1080,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_groovyReferenceListWeigher">
@@ -459,6 +1111,22 @@
         <observation name="UNDEFINED" value="8.0" />
         <observation name="unknown" value="6.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="unknown" value="15.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="unknown" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="unknown" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="unknown" value="26.0" />
+      </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_javaInheritance">
       <dailyData date="27-5-2018">
@@ -476,6 +1144,22 @@
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="8.0" />
         <observation name="null" value="6.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="null" value="15.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="null" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="null" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="null" value="26.0" />
       </dailyData>
     </factor>
     <factor id="categoricalFeature:prox_referenceList">
@@ -495,6 +1179,22 @@
         <observation name="UNDEFINED" value="8.0" />
         <observation name="unknown" value="6.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="unknown" value="15.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="unknown" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="unknown" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="unknown" value="26.0" />
+      </dailyData>
     </factor>
     <factor id="categoricalFeature:recursion">
       <dailyData date="27-5-2018">
@@ -508,6 +1208,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="completionFinishedType">
@@ -530,6 +1242,25 @@
         <observation name="cancelled" value="61.0" />
         <observation name="typedSelect" value="14.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="cancelled" value="39.0" />
+        <observation name="explicitSelect" value="8.0" />
+        <observation name="typedSelect" value="14.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="cancelled" value="58.0" />
+        <observation name="explicitSelect" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="cancelled" value="122.0" />
+        <observation name="explicitSelect" value="4.0" />
+        <observation name="typedSelect" value="5.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="cancelled" value="97.0" />
+        <observation name="explicitSelect" value="26.0" />
+        <observation name="typedSelect" value="15.0" />
+      </dailyData>
     </factor>
     <factor id="completionType">
       <dailyData date="27-5-2018">
@@ -544,6 +1275,18 @@
       <dailyData date="5-6-2018">
         <observation name="BASIC" value="21.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="BASIC" value="44.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="BASIC" value="22.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="BASIC" value="20.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="BASIC" value="81.0" />
+      </dailyData>
     </factor>
     <factor id="completionUsage">
       <dailyData date="27-5-2018">
@@ -557,6 +1300,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="count" value="75.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="count" value="61.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="count" value="62.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="count" value="131.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="count" value="138.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:explicitProximity">
@@ -587,6 +1342,34 @@
       <dailyData date="5-6-2018">
         <observation name="average" value="0.0" />
         <observation name="count" value="27.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="81.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -624,6 +1407,34 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="81.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:mostUsed">
       <dailyData date="27-5-2018">
@@ -638,6 +1449,18 @@
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:nameEnd">
       <dailyData date="27-5-2018">
@@ -651,6 +1474,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:position">
@@ -682,6 +1517,34 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="0.139535" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.203682" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="0.714286" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.085034" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="28.823529" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="240.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="4044.417062" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="0.592593" />
+        <observation name="count" value="81.0" />
+        <observation name="max" value="7.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="1.10786" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:prefix">
       <dailyData date="27-5-2018">
@@ -711,6 +1574,34 @@
         <observation name="max" value="-1153.0" />
         <observation name="min" value="-1154.0" />
         <observation name="variance" value="0.130979" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="-1094.860465" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1154.0" />
+        <observation name="variance" value="31725.167642" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="-822.857143" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="-1152.0" />
+        <observation name="variance" value="120432.43102" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="-1153.352941" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="-1133.0" />
+        <observation name="min" value="-1159.0" />
+        <observation name="variance" value="32.693234" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="-1140.246914" />
+        <observation name="count" value="81.0" />
+        <observation name="max" value="-1052.0" />
+        <observation name="min" value="-1154.0" />
+        <observation name="variance" value="554.13023" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:priority">
@@ -742,6 +1633,34 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.162227" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="10.860465" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="20.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="65.207065" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="20.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="50.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="167.52381" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="67.588235" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="82.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="607.282082" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="9.62963" />
+        <observation name="count" value="81.0" />
+        <observation name="max" value="20.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="59.549486" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:prox_explicitlyImported">
       <dailyData date="27-5-2018">
@@ -772,6 +1691,38 @@
         <observation name="UNDEFINED" value="8.0" />
         <observation name="average" value="0.0" />
         <observation name="count" value="11.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="29.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="51.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -810,6 +1761,38 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="29.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="51.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:prox_sameModule">
       <dailyData date="27-5-2018">
@@ -843,6 +1826,38 @@
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="29.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="average" value="1.098039" />
+        <observation name="count" value="51.0" />
+        <observation name="max" value="2.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.658001" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:prox_samePsiMember">
@@ -878,6 +1893,38 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="7.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="29.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="3.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="8.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="1.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="15.0" />
+        <observation name="average" value="0.0" />
+        <observation name="count" value="51.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:query_length">
       <dailyData date="27-5-2018">
@@ -904,6 +1951,34 @@
       <dailyData date="5-6-2018">
         <observation name="average" value="0.0" />
         <observation name="count" value="27.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="0.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="0.0" />
+        <observation name="count" value="81.0" />
         <observation name="max" value="0.0" />
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
@@ -938,6 +2013,34 @@
         <observation name="min" value="1.0" />
         <observation name="variance" value="0.176852" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="2.813953" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="6.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="1.09615" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="4.857143" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="8.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="3.132925" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="6.117647" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="7.0" />
+        <observation name="min" value="2.0" />
+        <observation name="variance" value="2.276008" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="5.148148" />
+        <observation name="count" value="81.0" />
+        <observation name="max" value="13.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="9.207497" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:sameWords">
       <dailyData date="27-5-2018">
@@ -951,6 +2054,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:shorter">
@@ -966,6 +2081,18 @@
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:simple">
       <dailyData date="27-5-2018">
@@ -979,6 +2106,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:sorter">
@@ -1010,6 +2149,34 @@
         <observation name="min" value="1.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="1.0" />
+        <observation name="count" value="81.0" />
+        <observation name="max" value="1.0" />
+        <observation name="min" value="1.0" />
+        <observation name="variance" value="0.0" />
+      </dailyData>
     </factor>
     <factor id="doubleFeature:statics">
       <dailyData date="27-5-2018">
@@ -1023,6 +2190,18 @@
       </dailyData>
       <dailyData date="5-6-2018">
         <observation name="UNDEFINED" value="14.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="UNDEFINED" value="22.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="UNDEFINED" value="4.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="UNDEFINED" value="9.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="UNDEFINED" value="41.0" />
       </dailyData>
     </factor>
     <factor id="doubleFeature:stats">
@@ -1054,6 +2233,34 @@
         <observation name="min" value="0.0" />
         <observation name="variance" value="0.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="2325.255814" />
+        <observation name="count" value="43.0" />
+        <observation name="max" value="9999.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="11119261.95308" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="2856.0" />
+        <observation name="count" value="7.0" />
+        <observation name="max" value="9996.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="8591761.92" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="1176.352941" />
+        <observation name="count" value="17.0" />
+        <observation name="max" value="9999.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="4864943.820285" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="1850.777778" />
+        <observation name="count" value="81.0" />
+        <observation name="max" value="10000.0" />
+        <observation name="min" value="0.0" />
+        <observation name="variance" value="11434758.931709" />
+      </dailyData>
     </factor>
     <factor id="itemPosition">
       <dailyData date="27-5-2018">
@@ -1075,6 +2282,28 @@
         <observation name="0" value="3.0" />
         <observation name="1" value="1.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="0" value="6.0" />
+        <observation name="1" value="1.0" />
+        <observation name="2" value="1.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="1" value="3.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="1" value="1.0" />
+        <observation name="240" value="1.0" />
+        <observation name="4" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="0" value="14.0" />
+        <observation name="1" value="7.0" />
+        <observation name="2" value="3.0" />
+        <observation name="4" value="1.0" />
+        <observation name="7" value="1.0" />
+      </dailyData>
     </factor>
     <factor id="mnemonicsUsage">
       <dailyData date="27-5-2018">
@@ -1087,6 +2316,22 @@
       </dailyData>
       <dailyData date="30-5-2018">
         <observation name="total" value="3.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="total" value="6.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="total" value="2.0" />
+        <observation name="withMnemonics" value="0.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="total" value="2.0" />
+        <observation name="withMnemonics" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="total" value="20.0" />
         <observation name="withMnemonics" value="0.0" />
       </dailyData>
     </factor>
@@ -1108,6 +2353,30 @@
         <observation name="2" value="2.0" />
         <observation name="3" value="1.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="1" value="1.0" />
+        <observation name="2" value="5.0" />
+        <observation name="3" value="1.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="0" value="1.0" />
+        <observation name="1" value="1.0" />
+        <observation name="2" value="1.0" />
+        <observation name="3" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="1" value="2.0" />
+        <observation name="2" value="1.0" />
+        <observation name="3" value="1.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="1" value="6.0" />
+        <observation name="2" value="17.0" />
+        <observation name="3" value="1.0" />
+        <observation name="5" value="1.0" />
+        <observation name="7" value="1.0" />
+      </dailyData>
     </factor>
     <factor id="timeBetweenTyping">
       <dailyData date="27-5-2018">
@@ -1126,6 +2395,22 @@
         <observation name="average" value="1182.5" />
         <observation name="count" value="4.0" />
       </dailyData>
+      <dailyData date="6-6-2018">
+        <observation name="average" value="326.545455" />
+        <observation name="count" value="33.0" />
+      </dailyData>
+      <dailyData date="7-6-2018">
+        <observation name="average" value="297.0" />
+        <observation name="count" value="1.0" />
+      </dailyData>
+      <dailyData date="10-6-2018">
+        <observation name="average" value="313.875" />
+        <observation name="count" value="16.0" />
+      </dailyData>
+      <dailyData date="24-6-2018">
+        <observation name="average" value="828.225806" />
+        <observation name="count" value="31.0" />
+      </dailyData>
     </factor>
   </component>
   <component name="ProjectView">
@@ -1134,8 +2419,8 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -1146,11 +2431,6 @@
             <path>
               <item name="lom_server" type="b2602c69:ProjectViewProjectNode" />
               <item name="lom_server" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lom_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lom_server" type="462c0819:PsiDirectoryNode" />
               <item name="lom_server" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -1158,13 +2438,6 @@
               <item name="lom_server" type="462c0819:PsiDirectoryNode" />
               <item name="lom_server" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="lom_server" type="b2602c69:ProjectViewProjectNode" />
-              <item name="lom_server" type="462c0819:PsiDirectoryNode" />
-              <item name="lom_server" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="lom_server" type="b2602c69:ProjectViewProjectNode" />
@@ -1212,6 +2485,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="android.sdk.path" value="$USER_HOME$/soft/android-sdk-linux" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1529871633900" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="PostgreSQL" />
     <property name="jdk.selected.JAVA_MODULE" value="1.7" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../lom_android" />
@@ -1224,20 +2498,20 @@
     <property name="project.structure.last.edited" value="Facets" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="xpath.settings" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/templates" />
-      <recent name="$PROJECT_DIR$/lom_server" />
-      <recent name="$PROJECT_DIR$/static/js" />
-      <recent name="$PROJECT_DIR$/static/css" />
-      <recent name="$PROJECT_DIR$/utils" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/static/media" />
       <recent name="$PROJECT_DIR$/static/js" />
       <recent name="$PROJECT_DIR$/api" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/static/css" />
+      <recent name="$PROJECT_DIR$/templates" />
+      <recent name="$PROJECT_DIR$/lom_server" />
+      <recent name="$PROJECT_DIR$/static/js" />
+      <recent name="$PROJECT_DIR$/utils" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -1256,55 +2530,6 @@
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
-    </configuration>
-    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android App">
-      <option name="DEPLOY" value="true" />
-      <option name="ARTIFACT_NAME" value="" />
-      <option name="PM_INSTALL_OPTIONS" value="" />
-      <option name="ACTIVITY_EXTRA_FLAGS" value="" />
-      <option name="MODE" value="default_activity" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <Java />
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
-      <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="" />
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1528147961267" />
-      </method>
-    </configuration>
-    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Instrumented Tests">
-      <option name="TESTING_TYPE" value="0" />
-      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
-      <option name="METHOD_NAME" value="" />
-      <option name="CLASS_NAME" value="" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="EXTRA_OPTIONS" value="" />
-      <option name="CLEAR_LOGCAT" value="false" />
-      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="false" />
-      <option name="SKIP_NOOP_APK_INSTALLATIONS" value="true" />
-      <option name="FORCE_STOP_RUNNING_APP" value="true" />
-      <option name="TARGET_SELECTION_MODE" value="SHOW_DIALOG" />
-      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
-      <option name="PREFERRED_AVD" value="" />
-      <option name="DEBUGGER_TYPE" value="Java" />
-      <Java />
-      <Profilers>
-        <option name="ADVANCED_PROFILING_ENABLED" value="false" />
-      </Profilers>
-      <method v="2">
-        <option name="Android.Gradle.BeforeRunTask" enabled="true" />
-        <option name="com.android.instantApps.provision.BeforeRunTask" enabled="true" clearCache="false" clearProvisionedDevices="false" myTimestamp="1528147961264" />
-      </method>
     </configuration>
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HEIGHT" value="0" />
@@ -1347,6 +2572,8 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="pars_status" type="PythonConfigurationType" factoryName="Python">
@@ -1367,6 +2594,8 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="send_request" type="PythonConfigurationType" factoryName="Python">
@@ -1387,6 +2616,8 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
     <configuration name="lom_server" type="Python.DjangoServer" factoryName="Django server">
@@ -1501,7 +2732,10 @@
       <workItem from="1527106225168" duration="3595000" />
       <workItem from="1527429571103" duration="149000" />
       <workItem from="1527429858267" duration="1020000" />
-      <workItem from="1527431021535" duration="18890000" />
+      <workItem from="1527431021535" duration="27487000" />
+      <workItem from="1528644891558" duration="6244000" />
+      <workItem from="1529854408367" duration="400000" />
+      <workItem from="1529854884058" duration="8318000" />
     </task>
     <task id="LOCAL-00001" summary="ignor">
       <created>1518303237083</created>
@@ -1678,31 +2912,115 @@
       <option name="project" value="LOCAL" />
       <updated>1527711062806</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="site">
+      <created>1528147975027</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1528147975027</updated>
+    </task>
+    <task id="LOCAL-00027" summary="site">
+      <created>1528148970413</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1528148970413</updated>
+    </task>
+    <task id="LOCAL-00028" summary="site">
+      <created>1528234202411</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1528234202411</updated>
+    </task>
+    <task id="LOCAL-00029" summary="site">
+      <created>1528319832215</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1528319832215</updated>
+    </task>
+    <task id="LOCAL-00030" summary="site">
+      <created>1528320189968</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1528320189968</updated>
+    </task>
+    <task id="LOCAL-00031" summary="site">
+      <created>1528320292443</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1528320292443</updated>
+    </task>
+    <task id="LOCAL-00032" summary="site">
+      <created>1528320470891</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1528320470892</updated>
+    </task>
+    <task id="LOCAL-00033" summary="site">
+      <created>1528320523410</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1528320523410</updated>
+    </task>
+    <task id="LOCAL-00034" summary="site">
+      <created>1528320555127</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1528320555127</updated>
+    </task>
+    <task id="LOCAL-00035" summary="site">
+      <created>1528321369042</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1528321369042</updated>
+    </task>
+    <task id="LOCAL-00036" summary="site">
+      <created>1528321548587</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1528321548587</updated>
+    </task>
+    <task id="LOCAL-00037" summary="site">
+      <created>1528322827396</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1528322827396</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="274912000" />
+    <option name="totallyTimeSpent" value="298471000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="25" width="1922" height="1056" extended-state="6" />
+    <frame x="-1" y="25" width="1922" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.29286474" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.29925454" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Designer" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info id="Version Control" order="6" weight="0.30617678" />
+      <window_info active="true" id="Version Control" order="6" visible="true" weight="0.30937168" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.3272921" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3283582" />
+      <window_info anchor="bottom" id="Find" order="1" sideWeight="0.49946752" weight="0.3272921" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49893504" visible="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.5181237" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50106496" side_tool="true" visible="true" weight="0.3283582" />
       <window_info anchor="bottom" id="Messages" order="8" weight="0.3283582" />
       <window_info anchor="bottom" id="Database Changes" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
@@ -1714,9 +3032,9 @@
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="right" id="Nativer Admin" order="5" weight="0.32995737" />
       <window_info anchor="right" id="Maven Projects" order="6" />
-      <window_info anchor="right" id="SciView" order="7" />
-      <window_info anchor="right" id="Theme Preview" order="8" />
-      <window_info anchor="right" id="Database" order="9" weight="0.3295699" />
+      <window_info anchor="right" id="Theme Preview" order="7" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3295699" />
+      <window_info anchor="right" id="SciView" order="9" weight="0.32960597" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -1769,45 +3087,9 @@
           <option name="timeStamp" value="62" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="64" />
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/phonenumber_field/phonenumber.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="43" column="8" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/viewsets.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="163" column="6" selection-start-line="163" selection-start-column="6" selection-end-line="163" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/rest_framework/mixins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="125">
-          <caret line="17" column="8" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/utils/status.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/static/css/welcome.css" />
     <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/django/core/mail/message.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -1940,20 +3222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/material/templates/material/includes/material_css.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/material/templates/material/includes/material_js.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="50" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="50" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lom_server/static/material/fonts/roboto/roboto-bold-italic.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -2010,99 +3278,142 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/serializers.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="261">
-          <caret line="91" column="20" lean-forward="true" selection-start-line="88" selection-start-column="8" selection-end-line="91" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/post_list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="12" selection-start-line="4" selection-start-column="12" selection-end-line="4" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/api/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="21" selection-start-line="12" selection-start-column="11" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/.idea/dataSources.local.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/lom_server/settings.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/material/templates/material/includes/material_js.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1291">
-          <caret line="37" column="8" selection-start-line="37" selection-start-column="8" selection-end-line="37" selection-end-column="8" />
+        <state relative-caret-position="30">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="43" selection-end-line="2" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/django/forms/fields.py">
+    <entry file="file://$PROJECT_DIR$/api/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1974">
-          <caret line="208" column="46" selection-start-line="208" selection-start-column="43" selection-end-line="208" selection-end-column="46" />
+        <state relative-caret-position="1575">
+          <caret line="111" column="38" selection-start-line="111" selection-start-column="38" selection-end-line="111" selection-end-column="38" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/api/forms.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="29">
-          <caret line="27" column="75" selection-start-line="27" selection-start-column="75" selection-end-line="27" selection-end-column="75" />
+        <state relative-caret-position="540">
+          <caret line="39" column="46" selection-start-line="39" selection-start-column="46" selection-end-line="39" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/views.py">
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/django/forms/fields.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
-          <caret line="117" column="60" lean-forward="true" selection-start-line="117" selection-start-column="60" selection-end-line="117" selection-end-column="60" />
+        <state relative-caret-position="5415">
+          <caret line="389" selection-start-line="389" selection-end-line="389" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.local/lib/python3.6/site-packages/material/templates/material/includes/material_css.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/serializers.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="554">
+          <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/role.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="34" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="34" />
           <folding>
-            <element signature="e#39#80#0" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/request_new_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1275">
+          <caret line="85" column="23" selection-start-line="85" selection-start-column="23" selection-end-line="85" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/post_list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="8" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/dictionaries/bes.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/lom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-308">
+          <caret line="9" column="29" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lom_server/static/css/lom.bafdcbf88e52.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="76" selection-start-line="7" selection-start-column="76" selection-end-line="7" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="22" column="30" selection-start-line="22" selection-start-column="30" selection-end-line="22" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#1;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lom_server/static/css/lom.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="18" selection-start-line="17" selection-start-column="18" selection-end-line="17" selection-end-column="18" />
+        <state relative-caret-position="465">
+          <caret line="31" column="4" selection-start-line="31" selection-start-column="4" selection-end-line="31" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/lom.css">
+    <entry file="file://$PROJECT_DIR$/static/css/lom.bafdcbf88e52.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="22" column="32" selection-start-line="22" selection-start-column="32" selection-end-line="22" selection-end-column="32" />
+        <state relative-caret-position="525">
+          <caret line="85" selection-start-line="85" selection-end-line="85" />
+          <folding>
+            <element signature="e#39#80#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/api/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="4" selection-end-line="66" selection-end-column="8" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/lom_server/static/material/imgs/user.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/base.html">
+    <entry file="file://$PROJECT_DIR$/lom_server/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="65" column="6" selection-start-line="65" selection-start-column="5" selection-end-line="65" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/request_new_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="55" column="82" selection-start-line="55" selection-start-column="82" selection-end-line="55" selection-end-column="82" />
+        <state relative-caret-position="389">
+          <caret line="149" lean-forward="true" selection-start-line="149" selection-end-line="149" />
         </state>
       </provider>
     </entry>

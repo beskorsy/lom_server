@@ -6,7 +6,6 @@ from . import views
 
 urlpatterns = {
     url(r'^scrapyard/', ScrapyardListView.as_view(), name="Scrapyard list"),
-    # url(r'^requestnew/$', views.requestnew, name='requestnew'),
     url(r'^api/data', DataView.as_view(), name="Data list"),
     url(r'^locality/$', LocalityListView.as_view(), name="Locality list"),
     url(r'^localityadd/', LocalityListCreateView.as_view(), name="Locality add list"),
@@ -15,7 +14,8 @@ urlpatterns = {
     url(r'^transport/', TransportListView.as_view(), name="Transport list"),
     url(r'^customer/$', CustomerListView.as_view(), name="Customer list"),
     url(r'^customerupdate/', CustomerRetrieveView.as_view(), name="Customer update"),
-    url(r'^$', views.requestnew, name='requestnew')
+    url(r'^$', views.requestnew, name='requestnew'),
+    url(r'^rule', views.rule, name='rule')
 }
 
 urlpatterns = format_suffix_patterns(urlpatterns)

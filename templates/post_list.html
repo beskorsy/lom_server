@@ -1,9 +1,0 @@
-{% extends 'base.html' %}
-{% block content %}
-    {% for data in datas %}
-        <div class="post">
-            <h1><a href="">{{ data.name }}</a></h1>
-            <p>{{ data.price|linebreaksbr }}</p>
-        </div>
-    {% endfor %}
-{% endblock %}

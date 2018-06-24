@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '9g@bryugp75xk_0(c!kfd-s6kl27!k6gyz7*4f2r6=mjht*yd4'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['5.23.55.214', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['5.23.55.214', '127.0.0.1', 'localhost', 'bolsheloma.ru']
 
 
 # Application definition
@@ -142,11 +142,11 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
-STATICFILES_DIRS = ( os.path.join('static'), )
+STATICFILES_DIRS = ( os.path.join(BASE_DIR,'static'), )
 ADMIN_TOOLS_THEMING_CSS = 'css/theming.css'
 ADMIN_MEDIA_PREFIX = STATIC_URL + "admin_tool/"
 
-STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.CachedStaticFilesStorage'
 
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'

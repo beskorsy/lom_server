@@ -96,13 +96,6 @@ class CustomerListView(generics.ListAPIView):
         return queryset
 
 
-def post_list(request):
-    objects = Data.objects.all()
-    queryset = objects.get(pk=1)
-
-    return render(request, 'post_list.html', {'datas': queryset.scrapyards.all()})
-
-
 def requestnew(request):
     if request.method == "POST":
         form = RequestForm(request.POST)
@@ -135,3 +128,8 @@ def requestnew(request):
         form = RequestForm()
 
     return render(request, 'request_new_edit.html', {'form': form})
+
+
+def rule(request):
+
+    return render(request, 'role.html')

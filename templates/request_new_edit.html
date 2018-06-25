@@ -201,13 +201,13 @@
                         var dt = locality.distanceTygda;
 
                         if (dt < ds && dt < db) {
-                            $("#id_scrapyard").prop('selectedIndex', 1).formSelect();
+                            $("#id_scrapyard").prop('value', 'Тыгда').formSelect();
                             distance = dt;
                         } else if (db < ds && db < dt) {
-                            $("#id_scrapyard").prop('selectedIndex', 0).formSelect();
+                            $("#id_scrapyard").prop('value', 'Белогорск').formSelect();
                             distance = db;
                         } else if (ds < db && ds < dt) {
-                            $("#id_scrapyard").prop('selectedIndex', 2).formSelect();
+                            $("#id_scrapyard").prop('value', 'Сковородино').formSelect();
                             distance = ds;
                         }
                         setCost();

@@ -95,13 +95,13 @@
         function setPrice() {
             var number = parseFloat(scrapyards[$("#id_scrapyard").prop('selectedIndex')].price);
             price = number + excessFare * distance / 1000;
-            $("#price").text("Цена закупки за тонну: " + price.toFixed(2) + ' руб.');
+            $("#price").text("Цена закупки за тонну:\u00A0" + price.toFixed(2) + '\u00A0руб.');
         }
 
         function setCost() {
             var number = parseFloat(transports[$("#id_transport").prop('selectedIndex')].price);
             cost = number * distance / 1000;
-            $("#cost").text("Стоимость доставки: " + cost.toFixed(2) + ' руб.');
+            $("#cost").text("Стоимость доставки:\u00A0" + cost.toFixed(2) + '\u00A0руб.');
         }
 
         function checkPhone() {
@@ -120,7 +120,7 @@
                         success: function (data) {
                             if (data.length > 0) {
                                 discount = data[0].discount;
-                                $("#discount").text("Доплата по карте за тонну: " + discount + ' руб.');
+                                $("#discount").text("Доплата по карте за тонну:\u00A0" + discount + '\u00A0руб.');
 
                                 setCost();
                                 setPrice();

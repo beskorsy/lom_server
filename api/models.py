@@ -28,7 +28,7 @@ class Data(models.Model):
 class Customer(models.Model):
     """This class represents the bucketlist model."""
     phone = PhoneNumberField(blank=False, unique=False)
-    discount = models.DecimalField(blank=True, default=1, decimal_places=2, max_digits=5)
+    discount = models.DecimalField(blank=True, default=1, decimal_places=2, max_digits=10)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""

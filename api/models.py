@@ -25,6 +25,15 @@ class Data(models.Model):
         return "{}".format(self.loader, self.cutter, self.calculatedInPlace, self.excessFare)
 
 
+class Region(models.Model):
+    name = models.CharField(blank=False, unique=True, max_length=35)
+    uid = models.IntegerField(blank=False, primary_key=True)
+
+    def __str__(self):
+        """Return a human readable representation of the model instance."""
+        return "{}".format(self.name)
+
+
 class Customer(models.Model):
     """This class represents the bucketlist model."""
     phone = PhoneNumberField(blank=False, unique=False)
@@ -37,27 +46,19 @@ class Customer(models.Model):
 
 class Locality(models.Model):
     """This class represents the bucketlist model."""
-    name = models.CharField(blank=False, unique=True, max_length=25)
+    name = models.CharField(blank=False, max_length=100)
     distanceBelogorsk = models.IntegerField(blank=False, default=0)
     distanceSkovorodino = models.IntegerField(blank=False, default=0)
     distanceTygda = models.IntegerField(blank=False, default=0)
+    distanceKhabarovsk = models.IntegerField(blank=False, default=0)
+    distanceNahotka = models.IntegerField(blank=False, default=0)
     data = models.ForeignKey(Data, related_name='localitys', on_delete=models.CASCADE, default=1)
+    region = models.ForeignKey(Region, related_name='localitys', on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
-        return "{}".format(self.name, self.distanceBelogorsk, self.distanceSkovorodino, self.distanceTygda)
-
-
-class Scrapyard(models.Model):
-    """This class represents the bucketlist model."""
-    name = models.CharField(blank=False, unique=True, max_length=25)
-    price = models.DecimalField(blank=False, default=1, decimal_places=2, max_digits=10)
-    coef = models.DecimalField(blank=False, default=1, decimal_places=2, max_digits=5)
-    data = models.ForeignKey(Data, related_name='scrapyards', on_delete=models.CASCADE, null=True)
-
-    def __str__(self):
-        """Return a human readable representation of the model instance."""
-        return "{}".format(self.name, self.price)
+        return "{}".format(self.name, self.distanceBelogorsk, self.distanceSkovorodino, self.distanceTygda,
+                           self.distanceKhabarovsk, self.distanceNahotka)
 
 
 class Transport(models.Model):
@@ -72,9 +73,24 @@ class Transport(models.Model):
         return "{}".format(self.name, self.price, self.tonn)
 
 
+class Scrapyard(models.Model):
+    """This class represents the bucketlist model."""
+    name = models.CharField(blank=False, unique=True, max_length=25)
+    price = models.DecimalField(blank=False, default=1, decimal_places=2, max_digits=10)
+    coef = models.DecimalField(blank=False, default=1, decimal_places=2, max_digits=5)
+    data = models.ForeignKey(Data, related_name='scrapyards', on_delete=models.CASCADE, null=True)
+    uid = models.IntegerField(blank=False, primary_key=True)
+    transports = models.ManyToManyField(Transport)
+
+    def __str__(self):
+        """Return a human readable representation of the model instance."""
+        return "{}".format(self.name, self.price)
+
+
 class Email(models.Model):
     """This class represents the bucketlist model."""
     email = models.EmailField(blank=False, unique=True)
+    region = models.ForeignKey(Region, related_name='emails', on_delete=models.CASCADE, default=1)
 
     def __str__(self):
         """Return a human readable representation of the model instance."""
@@ -87,7 +103,8 @@ class Request(models.Model):
     cutter = models.BooleanField(blank=False)
     calculatedInPlace = models.BooleanField(blank=False)
     discount = models.CharField(blank=True, max_length=12)
-    locality = models.CharField(blank=False, max_length=25)
+    region = models.CharField(blank=False, max_length=50)
+    locality = models.CharField(blank=False, max_length=50)
     address = models.CharField(blank=True, max_length=125)
     scrapyard = models.CharField(blank=False, max_length=25)
     distantce = models.CharField(blank=False, max_length=10)
@@ -117,7 +134,8 @@ class Request(models.Model):
                "Дата: {}\n" \
                "Комментарий: {}\n" \
                "Грузчики: {}. Резчики: {}. Рассчет на месте: {}\n" \
-               "Дата создания запроса: {}".format(self.id.__str__(), self.phone, self.discount, self.locality,
-                                                  self.address, self.scrapyard, self.distantce, self.price,
-                                                  self.transport, self.tonn, self.cost, self.data, self.comment,
-                                                  self.loader, self.cutter, self.calculatedInPlace, self.createdDate)
+               "Дата создания запроса: {}".format(self.id.__str__(), self.phone, self.discount, self.region,
+                                                  self.locality, self.address, self.scrapyard, self.distantce,
+                                                  self.price, self.transport, self.tonn, self.cost, self.data,
+                                                  self.comment, self.loader, self.cutter, self.calculatedInPlace,
+                                                  self.createdDate)

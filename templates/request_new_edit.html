@@ -2,26 +2,26 @@
 {% load material_form %}
 
 {% block content %}
-    <h1>Оформить заказ</h1>
+<h1>Оформить заказ</h1>
 
-    <div class="col s7">
-        <form method="POST" id="post-form">
-            {% csrf_token %}
-            {% form form=form %}
-            {% endform %}
-            <button type="submit" class="btn btn-primary">Заказать</button>
-        </form>
-    </div>
-    <div class="col s5">
-        <h5 id="discount"></h5>
-        <h5 id="price"></h5>
-        <h5 id="cost"></h5>
-        <iframe id="video" width="560" height="315"
-                src="https://www.youtube.com/embed/d31oM1XDNZU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
-                allow="autoplay; encrypted-media" allowfullscreen></iframe>
-    </div>
+<div class="col s7">
+    <form method="POST" id="post-form">
+        {% csrf_token %}
+        {% form form=form %}
+        {% endform %}
+        <button type="submit" class="btn btn-primary">Заказать</button>
+    </form>
+</div>
+<div class="col s5">
+    <h5 id="discount"></h5>
+    <h5 id="price"></h5>
+    <h5 id="cost"></h5>
+    <iframe id="video" width="560" height="315"
+            src="https://www.youtube.com/embed/d31oM1XDNZU?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0"
+            allow="autoplay; encrypted-media" allowfullscreen></iframe>
+</div>
 
-    <script>
+<script>
 
         $('#post-form').on('submit', function (event) {
             if ($("#id_phone").val().length > 0) {
@@ -33,9 +33,19 @@
             }
         });
 
+
+        $("#id_locality_kh_container").hide();
+        $("#id_locality_ev_container").hide();
+        $("#id_locality_pr_container").hide();
+
+        $("#id_transport_bel_container").hide();
+        $("#id_transport_tyg_container").hide();
+        $("#id_transport_sk_container").hide();
+        $("#id_transport_kh_container").hide();
+        $("#id_transport_nah_container").hide();
+
         function create_post() {
             console.log("create post is working!");
-            var transport = transports[$("#id_transport").prop('selectedIndex')];
             $.ajax({
                 url: "../requestadd/",
                 type: "POST",
@@ -45,11 +55,12 @@
                     cutter: false,
                     calculatedInPlace: false,
                     discount: discount,
+                    region: region.name,
                     locality: locality.name,
                     address: $("#id_address").val(),
-                    scrapyard: scrapyards[$("#id_scrapyard").prop('selectedIndex')].name,
+                    scrapyard: selectScrapyard.name,
                     distantce: distance,
-                    transport: transport.name + " " + transport.tonn + " тонн",
+                    transport: selectTransport.name + " " + selectTransport.tonn + " тонн",
                     cost: cost,
                     tonn: $("#id_tonn").val(),
                     data: $("#id_data").val(),
@@ -83,7 +94,13 @@
         });
 
         var transports;
+        var scrapyardsTransport;
         var scrapyards;
+
+        var selectScrapyard;
+        var selectTransport;
+
+        var region;
         var locality;
         var excessFare = 0;
         var price = 0;
@@ -93,13 +110,14 @@
         var phone;
 
         function setPrice() {
-            var number = parseFloat(scrapyards[$("#id_scrapyard").prop('selectedIndex')].price);
+            var number = parseFloat(selectScrapyard.price);
             price = number + excessFare * distance / 1000;
             $("#price").text("Цена закупки за тонну:\u00A0" + price.toFixed(2) + '\u00A0руб.');
         }
 
         function setCost() {
-            var number = parseFloat(transports[$("#id_transport").prop('selectedIndex')].price);
+            selectTransport = transports[scrapyardsTransport.prop('selectedIndex')];
+            var number = parseFloat(selectTransport.price);
             cost = number * distance / 1000;
             $("#cost").text("Стоимость доставки:\u00A0" + cost.toFixed(2) + '\u00A0руб.');
         }
@@ -131,6 +149,47 @@
             }
         }
 
+
+        function changeLocality(val) {
+            $.ajax({
+                    url: '../locality/',
+                    data: 'name=' + val,
+                    dataType: 'json',
+                    success: function (data) {
+                        if (data.length > 0) {
+                            locality = data[0];
+                            var db = locality.distanceBelogorsk;
+                            var ds = locality.distanceSkovorodino;
+                            var dt = locality.distanceTygda;
+                            var dk = locality.distanceKhabarovsk;
+                            var dn = locality.distanceNahotka;
+                            var min = Math.min(dt, ds, dt, dk, dn)
+
+                            if (dt === min) {
+                                $("#id_scrapyard").prop('value', 'Тыгда').formSelect().change();
+                                distance = dt;
+                            } else if (db === min) {
+                                $("#id_scrapyard").prop('value', 'Белогорск').formSelect().change();
+                                distance = db;
+                            } else if (ds === min) {
+                                $("#id_scrapyard").prop('value', 'Сковородино').formSelect().change();
+                                distance = ds;
+                            } else if (dk === min) {
+                                $("#id_scrapyard").prop('value', 'Хабаровск').formSelect().change();
+                                distance = dk;
+                            } else if (dn === min) {
+                                $("#id_scrapyard").prop('value', 'Находка').formSelect().change();
+                                distance = dn;
+                            }
+
+                            setCost();
+                            setPrice();
+                        }
+                    }
+            });
+        }
+
+
         $.ajax({
             url: '../api/data/',
             dataType: 'json',
@@ -138,10 +197,7 @@
                 transports = data.transports;
                 scrapyards = data.scrapyards;
                 excessFare = 1;
-                $("#id_locality").prop('selectedIndex', 0).formSelect().change();
-
-                setPrice();
-                setCost();
+                $("#id_locality_amur").prop('selectedIndex', 0).formSelect().change();
             }
         });
 
@@ -154,20 +210,82 @@
 
 
         $("#id_scrapyard").change("input", function () {
-            if ($("#id_scrapyard").prop('selectedIndex') === 0) {
+            var selectedIndex = $("#id_scrapyard").prop('selectedIndex');
+            selectScrapyard = scrapyards[$("#id_scrapyard").prop('selectedIndex')];
+
+            if (selectedIndex === 0) {
                 distance = locality.distanceBelogorsk;
-            } else if ($("#id_scrapyard").prop('selectedIndex') === 1) {
+                $("#id_transport_bel_container").show();
+                scrapyardsTransport = $("#id_transport_bel").change();
+                $("#id_transport_tyg_container").hide();
+                $("#id_transport_sk_container").hide();
+                $("#id_transport_kh_container").hide();
+                $("#id_transport_nah_container").hide();
+            } else if (selectedIndex === 1) {
                 distance = locality.distanceTygda;
-            } else {
+
+                $("#id_transport_bel_container").hide();
+                $("#id_transport_tyg_container").show();
+                scrapyardsTransport = $("#id_transport_tyg")
+                $("#id_transport_sk_container").hide();
+                $("#id_transport_kh_container").hide();
+                $("#id_transport_nah_container").hide();
+            } else if (selectedIndex === 2) {
                 distance = locality.distanceSkovorodino;
+
+                $("#id_transport_bel_container").hide();
+                $("#id_transport_tyg_container").hide();
+                $("#id_transport_sk_container").show();
+                scrapyardsTransport = $("#id_transport_sk")
+                $("#id_transport_kh_container").hide();
+                $("#id_transport_nah_container").hide();
+            } else if (selectedIndex === 3) {
+                distance = locality.distanceKhabarovsk;
+
+                $("#id_transport_bel_container").hide();
+                $("#id_transport_tyg_container").hide();
+                $("#id_transport_sk_container").hide();
+                $("#id_transport_kh_container").show();
+                scrapyardsTransport = $("#id_transport_kh")
+                $("#id_transport_nah_container").hide();
+            } else if (selectedIndex === 4) {
+                distance = locality.distanceNahotka;
+
+                $("#id_transport_bel_container").hide();
+                $("#id_transport_tyg_container").hide();
+                $("#id_transport_sk_container").hide();
+                $("#id_transport_kh_container").hide();
+                $("#id_transport_nah_container").show();
+                scrapyardsTransport = $("#id_transport_nah")
             }
+            scrapyardsTransport.change();
 
             setCost();
             setPrice();
         });
 
 
-        $("#id_transport").change("input", function () {
+        $("#id_transport_bel").change("input", function () {
+            setCost();
+        });
+
+
+        $("#id_transport_tyg").change("input", function () {
+            setCost();
+        });
+
+
+        $("#id_transport_sk").change("input", function () {
+            setCost();
+        });
+
+
+        $("#id_transport_kh").change("input", function () {
+            setCost();
+        });
+
+
+        $("#id_transport_nah").change("input", function () {
             setCost();
         });
 
@@ -176,45 +294,70 @@
             var val = parseInt($("#id_tonn").val(), 10);
 
             if (val > 0) {
-                for (i = 0; i < transports.length; i++) {
-                    if (val <= transports[i].tonn) {
-                        $("#id_transport").prop('selected', true).prop('selectedIndex', i).formSelect();
+                var length = selectScrapyard.transports.length;
+                for (var i = 0; i < length; i++) {
+                    var tr = transports[selectScrapyard.transports[i]-1];
+                    if (val <= tr.tonn) {
+                        scrapyardsTransport.prop('selected', true).prop('selectedIndex', i).formSelect().change();
                         return;
                     }
                 }
-                $("#id_transport").prop('selected', true).prop('selectedIndex', i - 1).formSelect();
+                scrapyardsTransport.prop('selected', true).prop('selectedIndex', length-1).formSelect().change();
             }
         });
 
-        $("#id_locality").change("input", function () {
-            var val = $("#id_locality").val();
-
-            $.ajax({
-                url: '../locality/',
-                data: 'name=' + val,
-                dataType: 'json',
-                success: function (data) {
-                    if (data.length > 0) {
-                        locality = data[0];
-                        var db = locality.distanceBelogorsk;
-                        var ds = locality.distanceSkovorodino;
-                        var dt = locality.distanceTygda;
-
-                        if (dt < ds && dt < db) {
-                            $("#id_scrapyard").prop('value', 'Тыгда').formSelect();
-                            distance = dt;
-                        } else if (db < ds && db < dt) {
-                            $("#id_scrapyard").prop('value', 'Белогорск').formSelect();
-                            distance = db;
-                        } else if (ds < db && ds < dt) {
-                            $("#id_scrapyard").prop('value', 'Сковородино').formSelect();
-                            distance = ds;
-                        }
-                        setCost();
-                        setPrice();
-                    }
-                }
-            });
+        $("#id_locality_amur").change("input", function () {
+            var val = $("#id_locality_amur").val();
+            changeLocality(val);
         });
-    </script>
+
+        $("#id_locality_kh").change("input", function () {
+            var val = $("#id_locality_kh").val();
+            changeLocality(val);
+        });
+
+        $("#id_locality_ev").change("input", function () {
+            var val = $("#id_locality_ev").val();
+            changeLocality(val);
+        });
+
+        $("#id_locality_pr").change("input", function () {
+            var val = $("#id_locality_pr").val();
+            changeLocality(val);
+        });
+
+        $("#id_region").change("input", function () {
+            var selectedIndex = $("#id_region").prop('selectedIndex');
+
+           if (selectedIndex === 0) {
+                $("#id_locality_amur_container").show();
+                $("#id_locality_amur").change();
+                $("#id_locality_kh_container").hide();
+                $("#id_locality_ev_container").hide();
+                $("#id_locality_pr_container").hide();
+           } else if (selectedIndex === 1) {
+                $("#id_locality_amur_container").hide();
+                $("#id_locality_kh_container").show();
+                $("#id_locality_kh").change();
+                $("#id_locality_ev_container").hide();
+                $("#id_locality_pr_container").hide();
+           } else if (selectedIndex === 2) {
+                $("#id_locality_amur_container").hide();
+                $("#id_locality_kh_container").hide();
+                $("#id_locality_ev_container").show();
+                $("#id_locality_ev").change();
+                $("#id_locality_pr_container").hide();
+           } else if (selectedIndex === 3) {
+                $("#id_locality_amur_container").hide();
+                $("#id_locality_kh_container").hide();
+                $("#id_locality_ev_container").hide();
+                $("#id_locality_pr_container").show();
+                $("#id_locality_pr").change();
+           }
+
+        });
+
+
+
+</script>
 {% endblock %}

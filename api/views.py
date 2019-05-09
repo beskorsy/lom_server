@@ -4,9 +4,9 @@ from django.shortcuts import render
 from rest_framework import generics
 
 # from api.form import SubscribeForm, AddressForm
-from .models import Data, Locality, Scrapyard, Transport, Customer, Request, Email
+from .models import Data, Locality, Scrapyard, Transport, Customer, Request, Email, Region
 from .serializers import DataSerializer, CustomerSerializer, LocalitySerializer, ScrapyardSerializer, \
-    TransportSerializer, RequestSerializer
+    TransportSerializer, RequestSerializer, RegionSerializer
 from .forms import RequestForm
 
 
@@ -31,6 +31,12 @@ class LocalityListView(generics.ListAPIView):
         if name is not None:
             queryset = queryset.filter(name=name)
         return queryset
+
+
+class RegionListView(generics.ListAPIView):
+    """This class defines the create behavior of our rest api."""
+    queryset = Region.objects.all()
+    serializer_class = RegionSerializer
 
 
 class LocalityListCreateView(generics.ListCreateAPIView):

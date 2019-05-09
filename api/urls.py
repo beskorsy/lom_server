@@ -1,12 +1,13 @@
 from django.conf.urls import url
 from rest_framework.urlpatterns import format_suffix_patterns
 from .views import LocalityListView, ScrapyardListView, TransportListView, CustomerRetrieveView, DataView, \
-    LocalityListCreateView, RequestCreateView, CustomerListView, RequestListView
+    LocalityListCreateView, RequestCreateView, CustomerListView, RequestListView, RegionListView
 from . import views
 
 urlpatterns = {
     url(r'^scrapyard/', ScrapyardListView.as_view(), name="Scrapyard list"),
     url(r'^api/data', DataView.as_view(), name="Data list"),
+    url(r'^region/', RegionListView.as_view(), name="Region list"),
     url(r'^locality/$', LocalityListView.as_view(), name="Locality list"),
     url(r'^localityadd/', LocalityListCreateView.as_view(), name="Locality add list"),
     url(r'^requestadd/', RequestCreateView.as_view(), name="Request list"),
